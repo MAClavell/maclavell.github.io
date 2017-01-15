@@ -1,0 +1,376 @@
+/* BUTTON BAR */
+
+#buttonsContainer {
+	position: fixed;
+	width: 100%;
+	height: 3em;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+	background-color: #4F4F4F;
+	text-align: center;
+	overflow: visible;
+}
+
+.buttons {
+	min-width: 750px;
+}
+
+.buttons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons li {
+	display: inline-block;
+	padding-left: 5%
+}
+
+.buttons li a {
+    display: inline-block;
+    color: #F29B0F;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.buttons li a:hover {
+    background-color: #111;
+}
+
+/* HEADER */
+
+#header {
+	background-image: url("../media/brown.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #4F4F4F;
+	font-family: 'Archivo Narrow', sans-serif;
+	min-height: 700px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 200%;
+	min-width: 750px;
+}
+
+#button {
+	background-color: black;
+	background-size: cover;
+    border: 0px solid white;
+    background-image: url("../media/linkedin.png");
+    border-radius: 50%;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#button:hover {
+	cursor: pointer;
+	border: 1px solid white;
+}
+
+/* ABOUT ME #DE8540*/
+
+#aboutContainer { 
+    background-image: url("../media/FL.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -2.5em;
+    min-height: 29em;
+	width: 100%;
+	min-width: 750px;
+}
+
+#about {
+	background-color: #F0F0F0;
+	width: 30%;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-width: 500px;
+}
+
+#about h2 {
+	text-align: center;
+}
+
+/* EXPERIENCES */
+
+#experiencesContainer { 
+    background-image: url("../media/gradient.jpg");
+	background-size: cover;
+	width: 100%;
+	min-width: 750px;
+}
+
+#experiences {
+	text-align: center;
+	height: 20%;
+	width: 40%;
+	margin: 0 auto;
+	min-width: 750px;
+	color: #F0F0F0;
+}
+
+#experiences h3 {
+	color: orange;
+}
+
+#eCode {
+	display: inline-block;
+	text-align: center;
+	width: 42%;
+	padding-right: 1em;
+}
+
+#eMusic {
+	display: inline-block;
+	text-align: center;
+	width: 42%;
+}
+
+/* PROJECTS */
+
+#projectsContainer {
+	width: 100%;
+	min-width: 750px;
+	overflow: auto;
+}
+
+#projects {
+	width: 40%;
+	min-width: 750px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 30px;
+	overflow: visible;
+}
+
+#projects h2 {
+	text-align: center;
+}
+
+#projects h3 {
+	color: #F27E1D;
+}
+
+.picture {
+	text-align: center;
+}
+
+.tabs-menu {
+    height: 30px;
+    float: left;
+    clear: both;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.tabs-menu li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 20px;
+    background-color: #ccc;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none; 
+}
+
+.tabs-menu .current a {
+    color: #F27E1D;
+}
+
+.tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.tab-content {
+	padding: 10px;
+	min-width: 750px;
+    display: none;
+}
+
+#tab-1 {
+	display: block;
+}
+
+#tab-2 {
+	text-align: center;
+	font-size: 80%;
+}
+
+/* CONTACT ME */
+
+#contactContainer { 
+	background-image: url("../media/vs.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #4F4F4F;
+    min-height: 15em;
+	width: 100%;
+	min-width: 750px;
+	color: #91572A;
+}
+
+#contact {
+	text-align: center;
+	height: 20%;
+	width: 40%;
+	margin: 0 auto;
+	min-width: 750px;
+	padding-left: 20px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color: #F0F0F0;
+	font-family: 'Raleway', sans-serif;
+	color: black;
+}
+
+#copyright {
+	height: 80px;
+	text-align: center;
+	color: #F29B0F;
+	background-color: #4F4F4F;
+}
+
+/* DOCUMENT */
+body {
+	height: 100%;
+	background-color: #F0F0F0;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	overflow: auto;
+}
+
+hr {
+	width: 55%;
+}
+
+a:link {
+	color: #F29B0F;
+}
+
+a:visited {
+	color: #A5510A;
+}
+
+
+/*
+MODAL IMAGES
+http://www.w3schools.com/howto/howto_css_modal_images.asp
+*/
+
+
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

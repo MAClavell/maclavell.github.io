@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+		<link rel="stylesheet" href="spider.css" />
+		<script src="jquery-3.1.1.min.js"></script>
+		<meta charset="utf-8" />
+		<title>Spider's | Michael Clavell</title>
+	</head>
+	<body>
+		<div id="buttonsContainer">
+			<div class="buttons">
+				<ul class="buttonList">
+					<li><a id="bHome" href="index.html">Home</a></li>
+					<li><a id="bAbout" href="index.html#aboutContainer">About Me</a></li>
+					<li><a id="bExperiences" href="index.html#experiencesContainer">Experiences</a></li>
+					<li><a id="bProjects" href="index.html#projects">Projects & Resume</a></li>
+					<li><a id="bContact" href="index.html#contactContainer">Contact Me</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div id="premise">
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1><i>A Spider's Revenge</i></h1>
+				<h2>Premise</h2>
+				<p>
+				You find yourself near the end of your battle with Muffet. The pastry-baking spider monster has chosen to spare you,
+				as you have surprisingly not hurt a single spider on your rampage throughout the Underground. However, a choice presents
+				itself to you. Standing right there holding a sign is a normal everyday spider. Should you leave it be, you can continue
+				along with your sadistic journey, but should you attack it, well... that would unleash <i>A Spider's Revenge</i>.
+				</p>
+				<p class="picture">
+				<img id="myImg" class="image" src="../media/muffet1.png" alt="The player's choice" style="width:320px;height:240px;">
+				</p>
+			</div>
+			<br>
+			<div id="overview">
+				<h2>Overview</h2>
+				<p>
+				<i>A Spider's Revenge</i> is a full-length boss encounter created in Unitale-CYF, a Unity based engine that mimics the
+				<i>Undertale</i> encounter mechanic by utilizing the Lua scripting language. The encounter will take place
+				during the "Genocide Route" of the main game and expand upon the existing encounter with Muffet. The goal is to replicate Genocide
+				Route encounters in the main game as faithfully as possible. This includes new animations, waves, and music.
+				</p>
+			</div>
+			<br>
+			<div id="preview">
+				<h2>Preview</h2>
+				<p>
+					
+				</p>
+			</div>
+
+			<div id="designs">
+				<h2>Designs</h2>
+				<p>
+					Below are some early notes and diagrams for the more flashy waves.
+				</p>
+				<p class="picture">
+				<img id="myImg2" class="image" src="../media/css.png" alt="A concept for a wave where the arena spins" style="width:320px;height:240px;">
+				</p>
+				<p class="picture">
+				<img id="myImg3" class="image" src="../media/css.png" alt="A concept for a wave where the arena is thrown around by spiders" style="width:320px;height:240px;">
+				</p>
+				<p class="picture">
+				<img id="myImg4" class="image" src="../media/css.png" alt="A concept for a wave where Muffet's pet cupcake charges the player" style="width:320px;height:240px;">
+				</p>
+			</div>
+		</div>
+
+		<div id="copyright"> <br/>&#169; Michael Clavell, 2017 <br> Game Design and Development</div>
+
+
+		<!--
+		MODAL IMAGES
+		http://www.w3schools.com/howto/howto_css_modal_images.asp
+		-->
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		    <span class="close">&times;</span>
+		    <img class="modal-content" id="img01">
+		    <div id="caption"></div>
+		</div>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg2');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg3');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg4');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+	</body>
+</html>

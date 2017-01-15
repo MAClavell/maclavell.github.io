@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+		<link rel="stylesheet" href="home.css" />
+		<script src="jquery-3.1.1.min.js"></script>
+		<meta charset="utf-8" />
+		<title>Michael Clavell</title>
+	</head>
+
+	<body>
+		<div id="buttonsContainer">
+			<div class="buttons">
+				<ul class="buttonList">
+					<li><a id="bHome">Home</a></li>
+					<li><a id="bAbout">About Me</a></li>
+					<li><a id="bExperiences">Experiences</a></li>
+					<li><a id="bProjects">Projects & Resume</a></li>
+					<li><a id="bContact">Contact Me</a></li>
+				</ul>
+				<script>
+				$("#bHome").click(function() {
+				$('html, body').animate({scrollTop: $("#header").offset().top - 85}, 500);
+				});
+				$("#bAbout").click(function() {
+				$('html, body').animate({scrollTop: $("#about").offset().top - 60}, 500);
+				});
+				$("#bExperiences").click(function() {
+				$('html, body').animate({scrollTop: $("#experiencesContainer").offset().top-45}, 500);
+				});
+				$("#bProjects").click(function() {
+				$('html, body').animate({scrollTop: $("#projects").offset().top-45}, 500);
+				});
+				$("#bContact").click(function() {
+				$('html, body').animate({scrollTop: $("#contact").offset().top - 50}, 500);
+				});
+				</script>
+			</div>
+		</div>
+		<div id="header">
+			<h1>
+			<br><br><br>
+			Michael Clavell <br/>
+			</h1>
+			
+			<h2>
+				Game Development & Music
+				<br>
+				<button type="button" id="button" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+			</h2>
+		</div>
+		
+		<div id="aboutContainer">
+			<br>
+			<br>
+			<br>
+			<br>		
+			<div id="about">
+			<br>
+				<h2>About Me</h2>
+				<p>
+					My name is Michael Clavell, and I am an 18 year old programmer graduating in the spring
+					of 2020 from Rochester Institute of Technology with a B.S. in Game Design and Development.
+				</p>
+				
+				<p>
+					I focus mostly on gameplay programming and event scripting, mixing the two together to create a fun and engaging experience
+					for the player. I also firmly believe in the importance of a memorable and impactful soundtrack that enhances the player's view
+					of the game and stays with them after they stop playing.
+				</p>
+				<br>
+			</div>
+			<br>
+			<br>
+		</div>
+		
+		<div id="experiencesContainer">	
+			<br>
+			<div id="experiences">
+				<h2>Experiences</h2>
+				<div id="eCode">
+					<h3>Code</h3>
+					Since the seventh grade I've become enthralled by everything programming. Starting with Java
+					and Lua, I quickly exanded to HTML5, CSS, and eventually C#. I have experience in beginner
+					engines such as RPG Maker and GameMaker, as well as more powerful ones like Monogame and Unity.
+				</div>
+				<div id="eMusic">
+					<h3>Music</h3>
+					I started becoming a musician in my fourth grade with the drums and percussion. I continue
+					playing them now and have also learned a bit of piano. Recently, digital music creation has
+					become a major hobby of mine and I have gained experience in the programs Reason, Logic Pro, and FL Studio.
+				</div>
+			</div>
+			<br>
+		</div>
+		
+		<div id="projectsContainer">
+			<div id="projects">
+				<h2>Projects & Resume</h2>
+				<ul class="tabs-menu">
+					<li class="current"><a href="#tab-1">Code</a></li>
+					<li><a href="#tab-2">Music</a></li>
+					<li><a href="#tab-3">Resume</a></li>
+				</ul>
+				<div class="tab">
+					<!-- Code -->
+					<div id="tab-1" class="tab-content">
+						<h3> IN-PROGRESS: A Spider's Revenge</h3>
+						<p> <i>A Spider's Revenge</i> is an in-progress custom boss encounter based on <i>Undertale's</i> Muffet and what she would do if the player made a certain decision. The encounter, started in January 2017, will feature new waves, animations, and music all made by myself.
+						<br>
+						<a href="a_spiders_revenge.html" target="_blank">Click here for a more detailed look.</a>
+						</p>
+						<br>
+						<h3> Web deisgn </h3>
+						<p>You are currently looking at my work! This entire website is created by me using HTML5, CSS, and a little bit of Javascript. Creating
+						this website and keeping it updated allows me to constantly be learning and improving on my past work.
+						</p>
+						<p class="picture">
+						<img id="myImg" src="../media/html.PNG" alt="HTML" contenteditable="false" style="width:320px;height:195px;">
+						</p>
+					</div>
+					
+					<!-- Music -->
+					<div id="tab-2" class="tab-content">
+
+						<br>
+						<hr>
+						<br>
+
+						Pokemon - Unwavering Emotions [Remix] [2016]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/Unwavering%20Emotions.mp3" type="audio/mp3">
+							Your browser does not support the audio element.
+						</audio>
+
+						<br>
+						<hr>
+						<br>
+
+						Undertale - Spider Dance [Remix] [2016]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/spider%20dance.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+						
+						<br>
+						<hr>
+						<br>
+
+						Undertale - Dummy! [Remix] [2016]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/dummy!.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+						
+						<br>
+						<hr>
+						<br>
+
+						Homestuck - Clockwork Constant [Original Track] [2016]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/clockwork.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+						
+						<br>
+						<hr>
+						<br>
+
+						Homestuck - Sburban Jungle [Recreation] [2015]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/Sburban%20Jungle.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+						
+						<br>
+						<hr>
+						<br>
+
+						Warp [Original Track] [2014]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/Warp.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+						
+						<br>
+						<hr>
+						<br>
+
+						The Legend of Korra - Avatar State [Recreation] [2014]
+						<br>
+						<audio controls>
+							  <source src="../media/audio/Avatar%20State.mp3" type="audio/mp3">
+							  Your browser does not support the audio element.
+						</audio>
+
+						<br>
+						<hr>
+						<br>
+					</div>
+					<!-- Resume -->
+					<div id="tab-3" class="tab-content">
+						<a href="../media/Michael_Clavell_Resume.pdf" target="_blank">Click for PDF.</a>
+						<br>
+						<br>
+						Preview:
+						<p>
+						<a href="../media/Michael_Clavell_Resume.pdf" target="_blank">
+						<img src="../media/Resume.PNG" alt="Resume" contenteditable="false" style="width:638px;height:825px;">
+						</a>
+						</p>
+					</div>
+				<script>
+					$(document).ready(function() {
+						$(".tabs-menu a").click(function(event) {
+							event.preventDefault();
+							$(this).parent().addClass("current");
+							$(this).parent().siblings().removeClass("current");
+							var tab = $(this).attr("href");
+							$(".tab-content").not(tab).css("display", "none");
+							$(tab).fadeIn();
+						});
+					});
+				</script>
+				</div>
+			</div>
+		</div>
+		<!--
+		http://www.jqueryrain.com/example/jquery-tabs/
+		-->
+		
+		<div id="contactContainer">
+			<br>
+			<br>
+			<div id="contact">
+				<h2>Contact Me</h2>
+				<a href="mailto:michaelclavell11@gmail.com">michaelclavell11@gmail.com</a>
+				<br>
+				<br>
+				<a href="https://www.linkedin.com/in/michael-clavell/" target="_blank">LinkedIn</a>
+			</div>
+		</div>
+		
+		<div id="copyright"> <br/>&#169; Michael Clavell, 2017 <br> Game Design and Development</div>
+
+
+		<!--
+		MODAL IMAGES
+		http://www.w3schools.com/howto/howto_css_modal_images.asp
+		-->
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		    <span class="close">&times;</span>
+		    <img class="modal-content" id="img01">
+		    <div id="caption"></div>
+		</div>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+
+	</body>
+</html>
