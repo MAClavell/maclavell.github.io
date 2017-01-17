@@ -80,8 +80,8 @@
 
 #aboutContainer { 
     background-image: url("media/FL.png");
-	background-size: cover;
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-attachment: fixed;
 	margin-top: -2.5em;
     min-height: 29em;
@@ -258,6 +258,7 @@
 #copyright {
 	height: 80px;
 	text-align: center;
+	width: 100%;
 	color: #F29B0F;
 	background-color: #4F4F4F;
 }
