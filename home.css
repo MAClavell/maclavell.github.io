@@ -43,6 +43,17 @@
 }
 
 /* HEADER */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+{
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
 
 #header {
 	background-image: url("media/brown.png");
@@ -84,7 +95,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	margin-top: -2.5em;
-    min-height: 29em;
+    min-height: 25em;
 	width: 100%;
 	min-width: 750px;
 }
