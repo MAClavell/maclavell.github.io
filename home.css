@@ -90,27 +90,34 @@
 /* ABOUT ME #DE8540*/
 
 #aboutContainer { 
-    background-image: url("media/FL.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+    background-color: #CA7D41;
 	margin-top: -2.5em;
     min-height: 25em;
 	width: 100%;
-	min-width: 750px;
 }
 
 #about {
 	background-color: #F0F0F0;
+    height: 25em;
 	width: 30%;
 	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	min-width: 500px;
+	padding-left: 2em;
+	padding-right: 2em;
+	min-width: 20em;
 }
 
 #about h2 {
 	text-align: center;
+}
+
+#breakAboutProject {
+    background-color: #7D4E28;
+    min-height: 1em;
+    width: 30%;
+    min-width: 20em;
+    margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 /* PROJECTS */
@@ -205,27 +212,31 @@
 /* CONTACT ME */
 
 #contactContainer { 
-	background-image: url("media/gradient.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-color: #4F4F4F;
+	background-color: #CA7D41;
     min-height: 15em;
 	width: 100%;
-	min-width: 750px;
-	color: #91572A;
+}
+
+#breakProjectContact {
+    background-color: #7D4E28;
+    min-height: 1em;
+    width: 40%;
+    min-width: 20em;
+    margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 #contact {
 	text-align: center;
-	height: 20%;
+	height: 15em;
 	width: 40%;
 	margin: 0 auto;
-	min-width: 750px;
-	padding-left: 20px;
-	padding-right: 30px;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	min-width: 20em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	background-color: #F0F0F0;
 	font-family: 'Raleway', sans-serif;
 	color: black;
@@ -272,7 +283,7 @@ http://www.w3schools.com/howto/howto_css_modal_images.asp
     transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+/* #myImg:hover {opacity: 0.7;} */
 
 /* The Modal (background) */
 .modal {
