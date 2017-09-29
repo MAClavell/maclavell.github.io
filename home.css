@@ -70,7 +70,11 @@
 	min-width: 750px;
 }
 
-#button {
+#socialMediaButtons1 {
+    margin: 0 auto;
+}
+
+#buttonLinkedIn {
 	background-color: black;
 	background-size: cover;
     border: 0px solid white;
@@ -82,9 +86,26 @@
     text-decoration: none;
 }
 
-#button:hover {
+#buttonHandshake {
+    background-color: black;
+    background-size: cover;
+    border: 0px solid white;
+    background-image: url("media/handshake.png");
+    border-radius: 50%;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#buttonLinkedIn:hover {
 	cursor: pointer;
 	border: 1px solid white;
+}
+
+#buttonHandshake:hover {
+    cursor: pointer;
+    border: 1px solid white;
 }
 
 /* ABOUT ME #DE8540*/
@@ -92,13 +113,13 @@
 #aboutContainer { 
     background-color: #CA7D41;
 	margin-top: -2.5em;
-    min-height: 25em;
+    min-height: 20em;
 	width: 100%;
 }
 
 #about {
 	background-color: #F0F0F0;
-    height: 25em;
+    min-height: 25em;
 	width: 30%;
 	margin: 0 auto;
 	padding-left: 2em;
