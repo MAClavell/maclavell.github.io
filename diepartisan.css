@@ -44,3 +44,68 @@
 #container {
 	width: 100%;
 }
+
+/* TITLE */
+#title {
+	text-align: center;
+}
+
+/* DESCRIPTION */
+#description{
+	width: 50em;
+	margin: 0 auto;
+}
+
+/* Story */
+#story{
+	width: 50em;
+	margin: 0 auto;
+}
+
+/* Gameplay */
+#gameplay{
+	width: 50em;
+	margin: 0 auto;
+}
+
+/* Download */
+#download{
+	width: 50em;
+	margin: 0 auto;
+}
+
+/* Development */
+#development{
+	width: 50em;
+	margin: 0 auto;
+}
+
+/* COPYRIGHT */
+#copyright {
+	margin-top: 2em;
+	height: 80px;
+	text-align: center;
+	color: #F29B0F;
+	background-color: #4F4F4F;
+}
+
+/* DOCUMENT */
+body {
+	height: 100%;
+	background-color: #F0F0F0;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	overflow: auto;
+}
+
+h2 {
+	color: #F27E1D;
+}
+
+a:link {
+	color: #F29B0F;
+}
+
+a:visited {
+	color: #A5510A;
+}
