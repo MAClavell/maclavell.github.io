@@ -43,7 +43,7 @@
 }
 
 /* HEADER */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+@media screen
 {
     html{
         overflow: hidden;
