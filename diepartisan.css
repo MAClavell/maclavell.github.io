@@ -50,6 +50,10 @@
 	text-align: center;
 }
 
+img {
+	border: 1px solid black;
+}
+
 /* DESCRIPTION */
 #description{
 	width: 50em;
@@ -66,6 +70,10 @@
 #gameplay{
 	width: 50em;
 	margin: 0 auto;
+}
+
+iframe {
+	border: 0;
 }
 
 /* Download */
