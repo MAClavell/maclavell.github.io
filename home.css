@@ -43,37 +43,13 @@
     background-color: #C7BAA7;
 }
 
-/* HEADER */
-@media screen
-{
-    html{
-        overflow: hidden;
-        height: 100%;    
-    }
-    body{
-        overflow: auto;
-        height: 100%;
-    }
-}
 
-#header {
-	background-image: url("media/orange_poly.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-color: #4F4F4F;
-	font-family: 'Archivo Narrow', sans-serif;
-	min-height: 700px;
-	width: 100%;
-	text-align: center;
-	color: white;
-	font-size: 200%;
-	min-width: 750px;
-}
+/* SOCIAL MEDIA BUTTONS */
 
-#socialMediaButtons {
+#socialMediaButtons1, #socialMediaButtons2 {
     margin: 0 auto;
 }
+
 
 .button{
     transition: all 0.3s ease 0s;
@@ -89,17 +65,17 @@
     background-position: center;
 }
 
-#buttonLinkedIn {
+#buttonLinkedIn1, #buttonLinkedIn2 {
     background-image: url("media/linkedin.png");
     background-size: 30px;
 }
 
-#buttonHandshake {
+#buttonHandshake1, #buttonHandshake2 {
     background-image: url("media/handshake.png");
     background-size: 35px;
 }
 
-#buttonGitHub {
+#buttonGitHub1, #buttonGitHub2 {
     background-image: url("media/github.png");
     background-size: 45px;
 }
@@ -109,19 +85,46 @@
 }
 
 
-#buttonHandshake:hover {
+#buttonHandshake1:hover, #buttonHandshake2:hover {
     background-color: #fccd32;
 }
 
-#buttonLinkedIn:hover {
+#buttonLinkedIn1:hover, #buttonLinkedIn2:hover {
     background-color: #1c78b2;
 }
 
-#buttonGitHub:hover {
+#buttonGitHub1:hover, #buttonGitHub2:hover {
     background-color: #171516;
 }
 
-/*Try this https://codepen.io/giana/pen/yYBpVY*/
+
+/* HEADER */
+@media screen
+{
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+#header {
+    background-image: url("media/orange_poly.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #4F4F4F;
+    font-family: 'Archivo Narrow', sans-serif;
+    min-height: 700px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    min-width: 750px;
+}
 
 
 /* ABOUT ME #DE8540
