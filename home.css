@@ -1,4 +1,5 @@
-/* BUTTON BAR */
+/* BUTTON BAR 
+#4F4F4F*/
 
 #buttonsContainer {
 	position: fixed;
@@ -8,7 +9,7 @@
 	top: 0;
 	z-index: 100;
 	border-top: 0;
-	background-color: #4F4F4F;
+	background-color: #6EC5B8;
 	text-align: center;
 	overflow: visible;
 }
@@ -30,7 +31,7 @@
 
 .buttons li a {
     display: inline-block;
-    color: #F29B0F;
+   
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -39,7 +40,7 @@
 }
 
 .buttons li a:hover {
-    background-color: #111;
+    background-color: #C7BAA7;
 }
 
 /* HEADER */
@@ -56,7 +57,7 @@
 }
 
 #header {
-	background-image: url("media/brown.png");
+	background-image: url("media/orange_poly.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -70,52 +71,71 @@
 	min-width: 750px;
 }
 
-#socialMediaButtons1 {
+#socialMediaButtons {
     margin: 0 auto;
 }
 
-#buttonLinkedIn {
-	background-color: black;
-	background-size: cover;
+.button{
+    transition: all 0.3s ease 0s;
+    background-color: #6EC5B8;
+    background-size: cover;
     border: 0px solid white;
-    background-image: url("media/linkedin.png");
     border-radius: 50%;
     color: white;
-    padding: 20px 20px;
+    padding: 30px 30px;
     text-align: center;
     text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#buttonLinkedIn {
+    background-image: url("media/linkedin.png");
+    background-size: 30px;
 }
 
 #buttonHandshake {
-    background-color: black;
-    background-size: cover;
-    border: 0px solid white;
     background-image: url("media/handshake.png");
-    border-radius: 50%;
-    color: white;
-    padding: 20px 20px;
-    text-align: center;
-    text-decoration: none;
+    background-size: 35px;
+}
+
+#buttonGitHub {
+    background-image: url("media/github.png");
+    background-size: 45px;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+
+#buttonHandshake:hover {
+    background-color: #fccd32;
 }
 
 #buttonLinkedIn:hover {
-	cursor: pointer;
-	border: 1px solid white;
+    background-color: #1c78b2;
 }
 
-#buttonHandshake:hover {
-    cursor: pointer;
-    border: 1px solid white;
+#buttonGitHub:hover {
+    background-color: #171516;
 }
 
-/* ABOUT ME #DE8540*/
+/*Try this https://codepen.io/giana/pen/yYBpVY*/
+
+
+/* ABOUT ME #DE8540
+
+#CA7D41 -- 11/16/17*/
 
 #aboutContainer { 
-    background-color: #CA7D41;
+    background-color: #FF9000;
 	margin-top: -2.5em;
     min-height: 20em;
 	width: 100%;
 }
+
+/* #F0F0F0*/
 
 #about {
 	background-color: #F0F0F0;
@@ -131,8 +151,10 @@
 	text-align: center;
 }
 
+/* #7D4E28*/
+
 #breakAboutProject {
-    background-color: #7D4E28;
+    background-color: #978B7D;
     min-height: 1em;
     width: 30%;
     min-width: 20em;
@@ -156,6 +178,7 @@
 	padding-left: 20px;
 	padding-right: 30px;
 	overflow: visible;
+    min-height: 30em;
 }
 
 #projects h2 {
@@ -221,11 +244,15 @@
     display: none;
 }
 
+.tab-1 h2 {
+    text-align: left;
+}
+
 #tab-1 {
 	display: block;
 }
 
-#tab-2 {
+#tab-3 {
 	text-align: center;
 	font-size: 80%;
 }
@@ -233,13 +260,13 @@
 /* CONTACT ME */
 
 #contactContainer { 
-	background-color: #CA7D41;
+	background-color: #FFAC00;
     min-height: 15em;
 	width: 100%;
 }
 
 #breakProjectContact {
-    background-color: #7D4E28;
+    background-color: #978B7D;
     min-height: 1em;
     width: 40%;
     min-width: 20em;
@@ -267,8 +294,8 @@
 	height: 80px;
 	text-align: center;
 	width: 100%;
-	color: #F29B0F;
-	background-color: #4F4F4F;
+
+	background-color: #978B7D;
 }
 
 /* DOCUMENT */

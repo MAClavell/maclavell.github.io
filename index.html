@@ -16,7 +16,7 @@
 				<ul class="buttonList">
 					<li><a id="bHome">Home</a></li>
 					<li><a id="bAbout">About Me</a></li>
-					<li><a id="bProjects">Projects & Resume</a></li>
+					<li><a id="bProjects">Portfolio & Resume</a></li>
 					<li><a id="bContact">Contact Me</a></li>
 				</ul>
 				<script>
@@ -45,9 +45,10 @@
 				Game Design & Development
 				<br>
 			</h2>
-			<div id="socialMediaButtons1">
-				<button type="button" id="buttonLinkedIn" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-				<button type="button" id="buttonHandshake" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+			<div id="socialMediaButtons">
+				<button type="button" class="button" id="buttonLinkedIn" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+				<button type="button" class="button" id="buttonHandshake" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+				<button type="button" class="button" id="buttonGitHub" onclick="window.open('https://github.com/MAClavell')"></button>
 			</div>
 		</div>
 		
@@ -73,15 +74,18 @@
 		
 		<div id="projectsContainer">
 			<div id="projects">
-				<h2>Projects & Resume</h2>
+				<h2>Portfolio & Resume</h2>
 				<ul class="tabs-menu">
-					<li class="current"><a href="#tab-1">Code</a></li>
-					<li><a href="#tab-2">Music</a></li>
-					<li><a href="#tab-3">Resume</a></li>
+					<li class="current"><a href="#tab-1">Major</a></li>
+					<li><a href="#tab-2">School</a></li>
+					<li><a href="#tab-3">Music</a></li>
+					<li><a href="#tab-4">Resume</a></li>
 				</ul>
 				<div class="tab">
-					<!-- Code -->
+					<!-- Majore Projects -->
 					<div id="tab-1" class="tab-content">
+						<h2>Major Projects</h2>
+						<hr>
 						<h3> RPG Shop UI (In-progress) </h3>
 						<p><i>RPG Shop UI</i> aims to help GameMasters of any tabletop RPG with the management of shops and major items and upgrades. With this tool, GMs will be able to utilize the power of Unity to easily create shops beforehand that players can browse during gametime.
 						</p>
@@ -99,14 +103,46 @@
 						<p>The Muffet Recreation is a project from Summer 2016 where I recreated the entire Muffet encounter from the game <i>Undertale</i>. The recreation was made using
 						the Lua programming language in the Unitale/CYF engine.
 						<br>
-						<a href="https://github.com/MAClavell/Muffet-Recreation" target="_blank">Click here to look at the source code on GitHub</a>
+						<a href="https://github.com/MAClavell/Muffet-Recreation" target="_blank">Source code available on GitHub</a>
 						</p>
 					</div>
 					
-					<!-- Music -->
+					<!-- Schoolwork -->
 					<div id="tab-2" class="tab-content">
-
+						<h2>School Projects</h2>
+						<hr>
+						<h3> Polygons </h3>
+						<p><i>Polygons</i> is a reimagining of the classic arcade game, <i>Asteroids</i>. Players must maneuver, dash, and shoot their way through an endless amount of
+						dangerous geometry. .
+						</p>
+						<p>
+						The project was created in Unity3D, but I was not allowed to use any of Unity's built-in methods for collision detection and movement. Therefore, the assignment
+						showcases custom methods for each of these whose concepts can be used in any language or engine.
+						</p>
+						<p>
+						<a href="https://github.com/MAClavell/Polygons" target="_blank">Source code and documentation available on GitHub</a>
+						</p>
+						<p style="text-align: center;">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/-TFdl9Q-CUo" allowfullscreen></iframe>
+						</p>
 						<br>
+						<h3> Humans vs. Zombies</h3>
+						<p>A rumored asteroid landing in the swamps outside a southern city has caused the military to panic, sending out troops to recover the potentially dangerous object.
+						Little did they know that the asteroid carries an alien virus that turns humans into brain-hungry monsters. It is a fight for survival in this exciting simulation of
+						<i>Humans vs. Zombies</i>!
+						</p>
+						<p>
+						Using Unity3D, I was tasked to create a Humans vs. Zombies simulation using Craig Reynold's steering behaviors as a basis. The agents have their own behaviors: zombies
+						will pursue the closest human, while humans will evade zombies that are chasing them. Humans also have the ability to fight back if they are together in groups of three.
+						The result is an interesting simulation where the outcome can change any second.
+						</p>
+						<p>
+						<a href="https://github.com/MAClavell/HvZ" target="_blank">Source code and documentation available on GitHub</a>
+						</p>
+					</div>
+					<!-- Music -->
+					<div id="tab-3" class="tab-content">
+						<h2>Music</h2>
 						<hr>
 						<br>
 
@@ -133,7 +169,9 @@
 						<br>
 					</div>
 					<!-- Resume -->
-					<div id="tab-3" class="tab-content">
+					<div id="tab-4" class="tab-content">
+						<h2>Resume</h2>
+						<hr>
 						<a href="media/Clavell_Michael_Resume.pdf" target="_blank">Click for PDF.</a>
 						<br>
 						<br>
@@ -168,21 +206,17 @@
 			<div id="contact">
 				<h2>Contact Me</h2>
 				<div  id="contactEmail"> 
+					<p>
 					Email
 					<br>
 					<a href="mailto:mac9406@g.rit.edu">mac9406@g.rit.edu</a>
+					</p>
 				</div>
 				<br>
-				<div  id="contactLinkedIn"> 
-					LinkedIn
-					<br>
-					<a href="https://www.linkedin.com/in/michael-clavell/">Connect</a>
-				</div>
-				<br>
-				<div  id="contactHandshake"> 
-					Handshake
-					<br>
-					<a href="https://app.joinhandshake.com/users/6921691">Discover</a>
+				<div id="socialMediaButtons">
+					<button type="button" class="button" id="buttonLinkedIn" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+					<button type="button" class="button" id="buttonHandshake" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+					<button type="button" class="button" id="buttonGitHub" onclick="window.open('https://github.com/MAClavell')"></button>
 				</div>
 			</div>
 		</div>
