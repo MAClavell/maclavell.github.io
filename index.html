@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
 		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
@@ -225,18 +232,24 @@
 			<div id="breakProjectContact"></div>
 			<div id="contact">
 				<h2>Contact Me</h2>
-				<div  id="contactEmail"> 
-					<p>
-					Email
-					<br>
-					<a href="mailto:mac9406@g.rit.edu">mac9406@g.rit.edu</a>
-					</p>
-				</div>
-				<br>
-				<div id="socialMediaButtons2">
-					<button type="button" class="button" id="buttonLinkedIn2" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-					<button type="button" class="button" id="buttonHandshake2" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-					<button type="button" class="button" id="buttonGitHub2" onclick="window.open('https://github.com/MAClavell')"></button>
+				<div id="contactContent">
+					<div id="contactLogo">
+						<img src="media/MyLogo.png" alt="Logo" width="261" height="132">
+					</div>
+					<div id="contactButtons">
+						<div  id="contactEmail"> 
+							<p>
+							Email
+							<br>
+							<a href="mailto:mac9406@g.rit.edu">mac9406@g.rit.edu</a>
+							</p>
+						</div>
+						<div id="socialMediaButtons2">
+							<button type="button" class="button" id="buttonLinkedIn2" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+							<button type="button" class="button" id="buttonHandshake2" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+							<button type="button" class="button" id="buttonGitHub2" onclick="window.open('https://github.com/MAClavell')"></button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -248,37 +261,5 @@
 		MODAL IMAGES
 		http://www.w3schools.com/howto/howto_css_modal_images.asp
 		-->
-
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-		    <span class="close">&times;</span>
-		    <img class="modal-content" src="" alt="" id="img01">
-		    <div id="caption"></div>
-		</div>
-
-		<script>
-			// Get the modal
-			var modal = document.getElementById('myModal');
-
-			// Get the image and insert it inside the modal - use its "alt" text as a caption
-			var img = document.getElementById('myImg');
-			var modalImg = document.getElementById("img01");
-			var captionText = document.getElementById("caption");
-			img.onclick = function(){
-			    modal.style.display = "block";
-			    modalImg.src = this.src;
-			    captionText.innerHTML = this.alt;
-			}
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
-
-			// When the user clicks on <span> (x), close the modal
-			span.onclick = function() { 
-			    modal.style.display = "none";
-			}
-		</script>
-
-
 	</body>
 </html>
