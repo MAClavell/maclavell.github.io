@@ -28,16 +28,16 @@
 				</ul>
 				<script>
 				$("#bHome").click(function() {
-				$('html, body').animate({scrollTop: $("#header").offset().top - 85}, 500);
+				document.querySelector('#header').scrollIntoView({ block: "start", behavior: 'smooth' });
 				});
 				$("#bAbout").click(function() {
-				$('html, body').animate({scrollTop: $("#about").offset().top - 60}, 500);
+				document.querySelector('#aboutContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
 				});
 				$("#bProjects").click(function() {
-				$('html, body').animate({scrollTop: $("#projects").offset().top-45}, 500);
+				document.querySelector('#projectsContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
 				});
 				$("#bContact").click(function() {
-				$('html, body').animate({scrollTop: $("#contact").offset().top - 50}, 500);
+				document.querySelector('#contactContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
 				});
 				</script>
 			</div>
@@ -106,6 +106,7 @@
 						</p>
 						<p>
 						The development of <i>DIE-PARTISAN</i> was over the course of four months in early 2017 for IGME 106. During this time I acted as project leader and oversaw timelines and schedules while developing with the rest of the team. Other than leader, my major responsibilities included:
+						</p>
 						<ul>
 							<li>Programmed player movement, controls, and actions.</li>
 							<li>Developed a method for tile textures to be procedually bitmapped onto the map. This allowed us to paint maps with our development tool and have the game place the textures.</li>
@@ -113,11 +114,11 @@
 							<li>Used multithreading to create optimizations in various aspects of the game.</li>
 							<li>Basic menu, game state, and class management</li>
 						</ul>
-						</p>
+						
 						<p>
 						The game can be downloaded directly <a href="https://www.dropbox.com/s/zzr0n4i7jlqv099/DIE-PARTISAN%20Alpha%200.6.6.6.zip?dl=1" target="_blank">here</a>.
 						<br>
-						The full project and documentation is available on <a href="https://github.com/MAClavell/DIE-PARTISAN" target="_blank">GitHub</a>.
+						The full project and documentation is available on <a href="https://github.com/MAClavell/DIE-PARTISAN/tree/master/GDAPSIIGame" target="_blank">GitHub</a>.
 						</p>
 						<p style="text-align: center;">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/eoYctvoglOQ" allowfullscreen></iframe>
@@ -127,7 +128,7 @@
 						<p>The Muffet Recreation is a project from Summer 2016 where I recreated the entire Muffet encounter from the game <i>Undertale</i>. The recreation was made using
 						the Lua programming language in the Unitale/CYF engine.
 						<br>
-						<a href="https://github.com/MAClavell/Muffet-Recreation" target="_blank">Source code available on GitHub.</a>
+						<a href="https://github.com/MAClavell/Muffet-Recreation/tree/master/CYF%20v0.6.0.2%20-%20Windows/Mods/Muffet%20Recreation" target="_blank">Source code available on GitHub.</a>
 						</p>
 					</div>
 					
@@ -144,7 +145,7 @@
 						create my own vector and physics based movement as well as my own collision detection. I added some animations and effects to create a more engaging experience.
 						</p>
 						<p>
-						<a href="https://github.com/MAClavell/Polygons" target="_blank">Source code and documentation available on GitHub.</a>
+						<a href="https://github.com/MAClavell/Polygons/tree/master/Polygons" target="_blank">Source code and documentation available on GitHub.</a>
 						</p>
 						<p style="text-align: center;">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/-TFdl9Q-CUo" allowfullscreen></iframe>
@@ -161,7 +162,7 @@
 						The result is an interesting simulation where the outcome can change any second.
 						</p>
 						<p>
-						<a href="https://github.com/MAClavell/HvZ" target="_blank">Source code and documentation available on GitHub.</a>
+						<a href="https://github.com/MAClavell/HvZ/tree/master/HvZ/Clavell_HvZ" target="_blank">Source code and documentation available on GitHub.</a>
 						</p>
 						<p style="text-align: center;">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/OfuJc3Jt5Ho" allowfullscreen></iframe>
