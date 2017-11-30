@@ -4,7 +4,7 @@
 #buttonsContainer {
 	position: fixed;
 	width: 100%;
-	height: 3em;
+	height: 47px;
 	left: 0;
 	top: 0;
 	z-index: 100;
@@ -80,6 +80,11 @@
     background-size: 45px;
 }
 
+#buttonItch1, #buttonItch2 {
+    background-image: url("media/itch.png");
+    background-size: 38px;
+}
+
 .button:hover {
 	cursor: pointer;
 }
@@ -95,6 +100,10 @@
 
 #buttonGitHub1:hover, #buttonGitHub2:hover {
     background-color: #171516;
+}
+
+#buttonItch1:hover, #buttonItch2:hover {
+    background-color: #f4565b;
 }
 
 
