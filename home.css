@@ -1,45 +1,60 @@
-/* BUTTON BAR 
-#4F4F4F*/
+/* DOCUMENT */
+body {
+	background-color: #F0F0F0;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+a:link {
+	color: #F29B0F;
+}
+
+a:visited {
+	color: #A5510A;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTON BAR */
 
 #buttonsContainer {
 	position: fixed;
 	width: 100%;
-	height: 47px;
-	left: 0;
-	top: 0;
-	z-index: 100;
-	border-top: 0;
+	height: 50px;
 	background-color: #6EC5B8;
-	text-align: center;
-	overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.buttons {
-	min-width: 750px;
+#buttons {
+    width: 80%;
 }
 
-.buttons ul {
+#buttons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.buttons li {
-	display: inline-block;
-	padding-left: 5%
-}
-
-.buttons li a {
-    display: inline-block;
-   
+#buttons li a {
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 20px;
     text-decoration: none;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
 }
 
-.buttons li a:hover {
+#buttons li a:hover {
     background-color: #C7BAA7;
 }
 
@@ -49,7 +64,6 @@
 #socialMediaButtons1, #socialMediaButtons2 {
     margin: 0 auto;
 }
-
 
 .button{
     transition: all 0.3s ease 0s;
@@ -108,18 +122,6 @@
 
 
 /* HEADER */
-@media screen
-{
-    html{
-        overflow: hidden;
-        height: 100%;    
-    }
-    body{
-        overflow: auto;
-        height: 100%;
-    }
-}
-
 #header {
     background-image: url("media/orange_poly.jpg");
     background-repeat: no-repeat;
@@ -132,14 +134,9 @@
     text-align: center;
     color: white;
     font-size: 200%;
-    min-width: 750px;
 }
 
-
-/* ABOUT ME #DE8540
-
-#CA7D41 -- 11/16/17*/
-
+/* ABOUT ME */
 #aboutContainer { 
     background-color: #FF9000;
 	margin-top: -2.5em;
@@ -147,29 +144,25 @@
 	width: 100%;
 }
 
-/* #F0F0F0*/
-
 #about {
 	background-color: #F0F0F0;
     min-height: 20em;
-	width: 30%;
 	margin: 0 auto;
 	padding-left: 2em;
 	padding-right: 2em;
-	min-width: 40em;
+    width: 90%;
+    max-width: 40em;
 }
 
 #about h2 {
 	text-align: center;
 }
 
-/* #7D4E28*/
-
 #breakAboutProject {
     background-color: #978B7D;
     min-height: 1em;
-    width: 30%;
-    min-width: 40em;
+    width: 90%;
+    max-width: 40em;
     margin: 0 auto;
     padding-left: 2em;
     padding-right: 2em;
@@ -179,17 +172,13 @@
 
 #projectsContainer {
 	width: 100%;
-	min-width: 750px;
-	overflow: auto;
+	overflow-y: auto;
 }
 
 #projects {
-	width: 40%;
-	min-width: 750px;
+    width: 90%;
+    max-width: 44em;
 	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 30px;
-	overflow: visible;
     min-height: 30em;
 }
 
@@ -199,10 +188,6 @@
 
 #projects h3 {
 	color: #F27E1D;
-}
-
-.picture {
-	text-align: center;
 }
 
 .tabs-menu {
@@ -247,12 +232,11 @@
     background-color: #fff;
     float: left;
     margin-bottom: 20px;
-    width: auto;
+    width: 100%;
 }
 
 .tab-content {
 	padding: 10px;
-	min-width: 750px;
     display: none;
 }
 
@@ -266,7 +250,6 @@
 
 #tab-3 {
 	text-align: center;
-	font-size: 80%;
 }
 
 /* CONTACT ME */
@@ -280,8 +263,8 @@
 #breakProjectContact {
     background-color: #978B7D;
     min-height: 1em;
-    width: 40%;
-    min-width: 22em;
+    width: 90%;
+    max-width: 40em;
     margin: 0 auto;
     padding-left: 2em;
     padding-right: 2em;
@@ -290,9 +273,9 @@
 #contact {
 	text-align: center;
 	min-height: 15em;
-	width: 40%;
+        width: 90%;
+    max-width: 40em;
 	margin: 0 auto;
-	min-width: 20em;
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-top: 1em;
@@ -320,41 +303,103 @@
 	background-color: #978B7D;
 }
 
-/* DOCUMENT */
-body {
-	height: 100%;
-	background-color: #F0F0F0;
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	overflow: auto;
-}
-
-hr {
-	width: 55%;
-}
-
-a:link {
-	color: #F29B0F;
-}
-
-a:visited {
-	color: #A5510A;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /*
 **********************************
 MOBILE STYLE
 **********************************
-*/
-@media screen and (max-width: 480px) {
 
+#buttonsContainer {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: #6EC5B8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    width: 80%;
+}
+
+#buttons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#buttons li a {
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+#buttons li a:hover {
+    background-color: #C7BAA7;
+}
+
+*/
+@media screen and (max-width: 640px) {
+    
+    body {
+        width: 100%;
+    }
+    
+    iframe {
+        display: none;
+    }
+    
     #buttonsContainer {
-        position: relative;
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    
+    #buttons ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #header {
+        width: 100%;
+        background-attachment: scroll;
+    }
+    
+    #aboutContainer { 
+        width: 100%;
     }
 
+    #about {
+        width: 90%;
+        max-width: none;
+    }
+    
+    #breakAboutProject {
+        width: 90%;
+        max-width: none;
+    }
+
+    #contactContainer { 
+        width: 100%;
+    }
+
+    #breakProjectContact {
+        width: 90%;
+        max-width: none;
+    }
+
+    #contact {
+        width: 90%;
+        max-width: none;
+    }
+    
 }

@@ -7,7 +7,7 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="theme-color" content="#ffffff">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
 		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
 		<link rel="stylesheet" href="home.css" />
@@ -18,8 +18,8 @@
 
 	<body>
 		<div id="buttonsContainer">
-			<div class="buttons">
-				<ul class="buttonList">
+			<div id="buttons">
+				<ul>
 					<li><a id="bHome">Home</a></li>
 					<li><a id="bAbout">About Me</a></li>
 					<li><a id="bProjects">Portfolio & Resume</a></li>
@@ -251,7 +251,7 @@
 							event.preventDefault();
 							$(this).parent().addClass("current");
 							$(this).parent().siblings().removeClass("current");
-							var tab = $(this).attr("href");
+							let tab = $(this).attr("href");
 							$(".tab-content").not(tab).css("display", "none");
 							$(tab).fadeIn();
 						});
