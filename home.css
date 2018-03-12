@@ -353,7 +353,8 @@ MOBILE STYLE
     }
     
     iframe {
-        display: none;
+        height: 80%;
+        width: 80%;
     }
     
     #buttonsContainer {
@@ -379,12 +380,26 @@ MOBILE STYLE
     }
 
     #about {
-        width: 90%;
+        width: 75%;
         max-width: none;
     }
     
+    .tabs-menu li {
+        line-height: 30px;
+        margin-right: 10px;
+    }
+
+    .tabs-menu li.current {
+        position: relative;
+    }
+
+    .tabs-menu li a {
+        padding: 5px;
+        font-size: 80%;
+    }
+    
     #breakAboutProject {
-        width: 90%;
+        width: 75%;
         max-width: none;
     }
 
@@ -393,12 +408,12 @@ MOBILE STYLE
     }
 
     #breakProjectContact {
-        width: 90%;
+        width: 75%;
         max-width: none;
     }
 
     #contact {
-        width: 90%;
+        width: 75%;
         max-width: none;
     }
     
