@@ -1,14 +1,24 @@
 //Tab view
 Vue.component('tab', {
-    props: ['name'],
+    props: ['name', 'index'],
     template: `
         <div>
-        <div class="tab">
+        <div class="tab" @click="changeTab(index)" :style="{ backgroundColor: color }">
             {{name}}
         </div>
         </div>`,
-    data() {
-        return {
+    methods: {
+        changeTab(ind) {
+            router.push({ name: 'tab', params: { index: ""+ind } });
+            currentTabIndex = ind;
+        }
+    },
+    computed: {
+        //Compute style based on current index
+        color() {
+            if(currentTabIndex == this.$props.index)
+                return "#F0F0F0";
+            else return "#978b7d";
         }
     }
 });
@@ -23,8 +33,6 @@ Vue.component('tabView', {
             </div>
         </div>
         </div>`,
-    methods: {
-    },
     created: function () {
         //Parse a tab's json
         let index = this.$route.params.index;

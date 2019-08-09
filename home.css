@@ -188,7 +188,6 @@ img {
 }
 
 .tab {
-    background-color: #1c78b2;
     width: 80px;
     display: flex;
     justify-content: center;
@@ -199,9 +198,6 @@ img {
 }
 .tab:hover {
     cursor: pointer;
-}
-.tab[selected] {
-    background-color: #f0f0f0;
 }
 
 #routerContainer {

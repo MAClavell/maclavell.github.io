@@ -1,7 +1,12 @@
+let currentTabIndex = 0;
+
+const tabViewTemplate = { template: '<tabView></tabView>' }
+const projectViewTemplate = { template: '<projectView></projectView>' }
+
 //All routes in the app
 const routes = [
-    { path: '/:index', name: 'tab', component: { template: '<tabView></tabView>' }, props: true },
-    { path: '/project/:project', name: 'project', component: { template: '<projectView></projectView>' }, props: true },
+    { path: '/:index', name: 'tab', component: tabViewTemplate, props: true },
+    { path: '/project/:project', name: 'project', component: projectViewTemplate, props: true },
 ]
 
 //The VueRouter
@@ -19,14 +24,11 @@ const app = new Vue({
         //Go to the home page (weather selection)
         exitProject() {
 
-        },
-        changeTab(index) {
-            router.push(index);
         }
     },
     created() {
         //Initial values
         this.$data.tabs = tabs;
-        this.changeTab("0");
+        router.push({ name: 'tab', params: { index: "0" } });
     }
 }).$mount('#root');

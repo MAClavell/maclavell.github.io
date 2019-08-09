@@ -76,15 +76,13 @@
 
 	<div id="projectsContainer">
 		<div id="root">
-			<div id="tabContainer">
-				<div v-for="t in tabs">
-					<tab v-bind:name="t.Name"></tab>
-				</div>
+			<div :key="$route.fullPath" id="tabContainer">
+				<tab v-for="(t, index) in tabs" v-bind:name="t.Name" v-bind:index="index"></tab>
 			</div>
 			<div id="routerContainer">
 				<transition name="slide" mode="out-in" enter-active-class="animated fadeInRight"
 					leave-active-class="animated fadeOutLeft">
-					<router-view></router-view>
+					<router-view :key="$route.fullPath"></router-view>
 				</transition>
 			</div>
 		</div>
