@@ -28,8 +28,8 @@ Vue.component('tabView', {
     template: `
         <div>
         <div class="tabView">
-            <div v-for="p in projects">
-                <projectThumb v-bind:json="p"></projectThumb>
+            <div v-for="(p, index) in projects">
+                <projectThumb v-bind:json="p" v-bind:index="index"></projectThumb>
             </div>
         </div>
         </div>`,
@@ -51,27 +51,19 @@ Vue.component('tabView', {
 
 //Project thumbnail
 Vue.component('projectThumb', {
-    props: ["json"],
+    props: ["json", "index"],
     template: `
         <div>
         <div class="thumbView">
             <h3>{{json.Name}}</h3>
             <img :src=json.Image alt="shortDesc">
             {{json.ShortDesc}}
+            <div class="thumbButton" @click="selectProject">See More...</div>
         </div>
         </div>`,
     methods: {
-        //Parse a project's json
-        parseProject(json) {
-
-        }
-    },
-    created: function () {
-        
-    },
-    data() {
-        return {
-            
+        selectProject() {
+            router.push(`project/${currentTabIndex}-${this.$props.index}`)
         }
     }
 });
@@ -80,21 +72,31 @@ Vue.component('projectThumb', {
 Vue.component('projectView', {
     template: `
         <div>
-        <div class="content" id="projectView">
+        <div class="projectView">
+            <div class="goBack" @click="goBack">Go Back</div>
+            <h2>{{json.Name}}</h2>
+            {{json.LongDesc}}
+            <div v-if="hasVideo">
+                <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="goBack" @click="goBack">Go Back</div>
         </div>
         </div>`,
     methods: {
-        //Parse a project's json
-        parseProject(json) {
-
+        goBack() {
+            router.push({ name: 'tab', params: { index: ""+currentTabIndex } });
         }
     },
     created: function () {
-        
+        let indices = this.$route.params.project.split("-");
+        this.$data.json = tabs[indices[0]].Projects[indices[1]];
+        if(this.$data.json.VideoLink) 
+            this.$data.hasVideo = true;
     },
     data() {
         return {
-            
+            json: {},
+            hasVideo: false
         }
     }
 });

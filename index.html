@@ -14,7 +14,7 @@
 	<title>Michael Clavell</title>
 
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
-	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="home.css" />
 
 	<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script> -->
@@ -34,48 +34,28 @@
 
 	<div id="header">
 		<h1>
-			Michael Clavell <br />
+			Michael Clavell
 		</h1>
 		<h2>
-			Game Development & Computer Science
+			Gameplay Programming & Full Stack
 		</h2>
-		<div id="socialMediaButtons1">
-			<button type="button" class="button" id="buttonLinkedIn1"
+		<div class="socialMediaButtons">
+			<button type="button" class="button email"
+				onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
+			<button type="button" class="button linkedIn"
 				onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-			<button type="button" class="button" id="buttonHandshake1"
+			<button type="button" class="button handshake"
 				onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-			<button type="button" class="button" id="buttonGitHub1"
+			<button type="button" class="button gitHub" 
 				onclick="window.open('https://github.com/MAClavell')"></button>
-			<button type="button" class="button" id="buttonItch1" onclick="window.open('https://joms.itch.io/')"></button>
+			<button type="button" class="button itch" 
+				onclick="window.open('https://joms.itch.io/')"></button>
 		</div>
-	</div>
-
-	<div id="aboutContainer">
-		<div id="about">
-			<br>
-			<h2>About Me</h2>
-			<p>
-				My name is Michael Clavell and I have a great passion for games, but it doesn't lie in just playing them.
-				The who and how behind them is what really gets me excited.
-			</p>
-			<p>
-				I am a second year student at Rochester Institute of Technology studying for a B.S. in Game Design and
-				Development. My focus lies in gameplay
-				programming, scripting, and game engine development. Taking visions and turning them into tangible experiences
-				is a huge part as to why I do what I do.
-			</p>
-			<p>
-				I've worked in C# with the Unity and Monogame engines, as well as C++ with Unreal Engine 4 and other custom
-				engines.
-				I also have experience using Lua and Java.
-			</p>
-			<br>
-		</div>
-		<div id="breakAboutProject"></div>
 	</div>
 
 	<div id="projectsContainer">
 		<div id="root">
+			<h2>Projects & Resume</h2>
 			<div :key="$route.fullPath" id="tabContainer">
 				<tab v-for="(t, index) in tabs" v-bind:name="t.Name" v-bind:index="index"></tab>
 			</div>
@@ -88,38 +68,50 @@
 		</div>
 	</div>
 
+	<div id="aboutContainer">
+		<div id="about">
+			<h2>About Me</h2>
+			<p>
+				My name is Michael Clavell and I have a great passion for games, but it doesn't lie in just playing
+				them.
+				The who and how behind them is what really gets me excited.
+			</p>
+			<p>
+				I am a second year student at Rochester Institute of Technology studying for a B.S. in Game Design and
+				Development. My focus lies in gameplay
+				programming, scripting, and game engine development. Taking visions and turning them into tangible
+				experiences
+				is a huge part as to why I do what I do.
+			</p>
+			<p>
+				I've worked in C# with the Unity and Monogame engines, as well as C++ with Unreal Engine 4 and other
+				custom
+				engines.
+				I also have experience using Lua and Java.
+			</p>
+			<br>
+		</div>
+		<div id="breakAboutProject"></div>
+	</div>
+
 	<div id="contactContainer">
-		<div id="breakProjectContact"></div>
 		<div id="contact">
 			<h2>Contact Me</h2>
-			<div id="contactContent">
-				<div id="contactLogo">
-					<img src="media/MyLogo.png" alt="Logo" width="261" height="132">
-				</div>
-				<div id="contactButtons">
-					<div id="contactEmail">
-						<p>
-							Email
-							<br>
-							<a href="mailto:mac9406@g.rit.edu">mac9406@g.rit.edu</a>
-						</p>
-					</div>
-					<div id="socialMediaButtons2">
-						<button type="button" class="button" id="buttonLinkedIn2"
-							onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-						<button type="button" class="button" id="buttonHandshake2"
-							onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-						<button type="button" class="button" id="buttonGitHub2"
-							onclick="window.open('https://github.com/MAClavell')"></button>
-						<button type="button" class="button" id="buttonItch2"
-							onclick="window.open('https://joms.itch.io/')"></button>
-					</div>
-				</div>
+			<div class="socialMediaButtons">
+				<button type="button" class="button email"
+					onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
+				<button type="button" class="button linkedIn"
+					onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+				<button type="button" class="button handshake"
+					onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+				<button type="button" class="button gitHub"
+					onclick="window.open('https://github.com/MAClavell')"></button>
+				<button type="button" class="button itch" onclick="window.open('https://joms.itch.io/')"></button>
 			</div>
 		</div>
 	</div>
 
-	<div id="copyright"> <br />&#169; Michael Clavell, 2018 <br> Game Design and Development</div>
+	<div id="copyright">&#169; Michael Clavell, 2019</div>
 
 	<script src="js/project-data.js"></script>
 	<script src="js/vue-components.js"></script>

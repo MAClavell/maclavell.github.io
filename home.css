@@ -1,26 +1,22 @@
 /* DOCUMENT */
 body {
 	background-color: #F0F0F0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
     padding: 0;
 }
-
 a:link {
 	color: #F29B0F;
 }
-
 a:visited {
 	color: #A5510A;
 }
-
 img {
     height: auto;
     max-width: 100%;
 }
 
 /* NAV BAR */
-
 #navBar {
 	position: fixed;
 	width: 100vw;
@@ -57,8 +53,10 @@ img {
 
 /* SOCIAL MEDIA BUTTONS */
 
-#socialMediaButtons1, #socialMediaButtons2 {
-    margin: 0 auto;
+.socialMediaButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .button{
@@ -69,28 +67,29 @@ img {
     border-radius: 50%;
     color: white;
     padding: 30px 30px;
+    margin: 0px 5px;
     text-align: center;
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#buttonLinkedIn1, #buttonLinkedIn2 {
+.email {
+
+}
+.linkedIn {
     background-image: url("media/linkedin.png");
     background-size: 30px;
 }
-
-#buttonHandshake1, #buttonHandshake2 {
+.handshake {
     background-image: url("media/handshake.png");
     background-size: 35px;
 }
-
-#buttonGitHub1, #buttonGitHub2 {
+.gitHub {
     background-image: url("media/github.png");
     background-size: 45px;
 }
-
-#buttonItch1, #buttonItch2 {
+.itch {
     background-image: url("media/itch.png");
     background-size: 38px;
 }
@@ -98,20 +97,19 @@ img {
 .button:hover {
 	cursor: pointer;
 }
-
-#buttonHandshake1:hover, #buttonHandshake2:hover {
+.email:hover {
+    
+}
+.handshake:hover {
     background-color: #fccd32;
 }
-
-#buttonLinkedIn1:hover, #buttonLinkedIn2:hover {
+.linkedIn:hover {
     background-color: #1c78b2;
 }
-
-#buttonGitHub1:hover, #buttonGitHub2:hover {
+.gitHub:hover {
     background-color: #171516;
 }
-
-#buttonItch1:hover, #buttonItch2:hover {
+.itch:hover {
     background-color: #f4565b;
 }
 
@@ -124,7 +122,7 @@ img {
     background-attachment: fixed;
     background-color: #4F4F4F;
 
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 200%;
 
@@ -140,13 +138,16 @@ img {
 /* ABOUT ME */
 #aboutContainer { 
     background-color: #FF9000;
-	width: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #about {
 	background-color: #F0F0F0;
     min-height: 20em;
-	margin: 0 auto;
 	padding-left: 2em;
 	padding-right: 2em;
     width: 90%;
@@ -162,7 +163,6 @@ img {
     min-height: 1em;
     width: 90%;
     max-width: 40em;
-    margin: 0 auto;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -178,6 +178,7 @@ img {
 #root {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #tabContainer {
@@ -202,13 +203,15 @@ img {
 
 #routerContainer {
     background-color: #f0f0f0;
+    margin-bottom: 35px;
+    width: 100%;
 }
 
 .tabView {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .thumbView {
@@ -218,55 +221,46 @@ img {
     margin-bottom: 1em;
 }
 
+.thumbView h3 {
+    margin: 0;
+}
+
+.projectView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* CONTACT ME */
 
 #contactContainer { 
-	background-color: #FFAC00;
-    min-height: 15em;
-	width: 100%;
-}
+	background-color: #ffac00;
+    width: 100%;
 
-#breakProjectContact {
-    background-color: #978B7D;
-    min-height: 1em;
-    width: 90%;
-    max-width: 40em;
-    margin: 0 auto;
-    padding-left: 2em;
-    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contact {
 	text-align: center;
-	min-height: 15em;
-    width: 90%;
-    max-width: 40em;
-	margin: 0 auto;
 	padding-left: 2em;
 	padding-right: 2em;
-	padding-top: 1em;
 	padding-bottom: 1em;
-	background-color: #F0F0F0;
 	font-family: 'Raleway', sans-serif;
 	color: black;
 }
 
-#contactLogo {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#contactButtons {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 #copyright {
-	height: 80px;
-	text-align: center;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-	background-color: #978B7D;
+    padding-top: 1em;
+    padding-bottom: 1em;
+	width: 100%;
+	background-color: #ffac00;
 }
 
 /*
