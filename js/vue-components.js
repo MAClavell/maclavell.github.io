@@ -27,7 +27,7 @@ Vue.component('tab', {
 Vue.component('tabView', {
     template: `
         <div>
-        <div class="tabView">
+        <div id="tabView">
             <div v-for="(p, index) in projects">
                 <projectThumb v-bind:json="p" v-bind:index="index"></projectThumb>
             </div>
@@ -57,7 +57,7 @@ Vue.component('projectThumb', {
         <div class="thumbView">
             <h3>{{json.Name}}</h3>
             <img :src=json.Image alt="shortDesc">
-            {{json.ShortDesc}}
+            <div v-html=json.ShortDesc></div>
             <div class="thumbButton" @click="selectProject">See More...</div>
         </div>
         </div>`,
@@ -71,11 +71,11 @@ Vue.component('projectThumb', {
 //Project view
 Vue.component('projectView', {
     template: `
-        <div>
+        <div id="projectContainer">
         <div class="projectView">
             <div class="goBack" @click="goBack">Go Back</div>
             <h2>{{json.Name}}</h2>
-            {{json.LongDesc}}
+            <div v-html=json.LongDesc></div>
             <div v-if="hasVideo">
                 <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
