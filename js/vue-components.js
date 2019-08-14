@@ -56,9 +56,9 @@ Vue.component('projectThumb', {
         <div>
         <div class="thumbView">
             <h3>{{json.Name}}</h3>
-            <img :src=json.Image alt="shortDesc">
+            <img :src=json.Thumbnail alt="thumbnail">
             <div v-html=json.ShortDesc></div>
-            <div class="thumbButton" @click="selectProject">See More...</div>
+            <div class="selectButton" @click="selectProject">See More...</div>
         </div>
         </div>`,
     methods: {
@@ -73,13 +73,15 @@ Vue.component('projectView', {
     template: `
         <div id="projectContainer">
         <div class="projectView">
-            <div class="goBack" @click="goBack">Go Back</div>
+        <br>
+            <div class="selectButton" @click="goBack">Go Back</div>
             <h2>{{json.Name}}</h2>
             <div v-html=json.LongDesc></div>
             <div v-if="hasVideo">
                 <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="goBack" @click="goBack">Go Back</div>
+            <div class="selectButton" @click="goBack">Go Back</div>\
+            <br>
         </div>
         </div>`,
     methods: {

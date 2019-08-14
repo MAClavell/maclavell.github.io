@@ -3,6 +3,32 @@ const tabs = [
         Name: "Desktop",
         Projects: [
             {
+                Name: "C++ Game Engine",
+                ShortDesc: "An on-going personal project to create a game engine in C++.",
+                LongDesc: `
+                <p>
+                Once <i>Snake on the Water</i> concluded, I wanted to expand my knowledge on how game engines worked,
+                 so I've been working on this untitled engine in my free time.
+                It is created in C++ utilizing DirectX for rendering and PhysX for physics.
+                </p>
+                <p>
+                Some of it's features include:
+                <ul>
+                    <li>An optimized rendering system that reduces the amount of data sent to the GPU by organizing GameObjects by their material and mesh.</li>
+                    <li>A component system akin to Unity3D, where developers can add multiple components to a base GameObject.</li>
+                    <li>An integrated rigidbody physics world utilizing NVIDIA PhysX 4.1.</li>
+                    <li>GameObject parenting</li>
+                    <li>Support for PBR and direct lighting.</li>
+                    <li>Shadow mapping for directional lights.</li>
+                    <li>Transparency and blending</li>
+                </ul>
+                <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">Check out my progress project on GitHub.</a>
+                </p>
+                `,
+                VideoLink: "",
+                Thumbnail: ""
+            },
+            {
                 Name: "Snake on the Water",
                 ShortDesc: "A nautical recreation of <i>Snake</i> in a custom-built C++ game engine.",
                 LongDesc:
@@ -51,6 +77,14 @@ const tabs = [
                 <a href="https://github.com/MAClavell/Knight-Move-3D" target="_blank">View the finished project on GitHub.</a>
                 </p>`,
                 VideoLink: "https://www.youtube-nocookie.com/embed/7Ao0NrOcGY0",
+                Thumbnail: ""
+            },
+            {
+                Name: "Night Shift",
+                ShortDesc: "",
+                LongDesc: `
+                `,
+                VideoLink: "",
                 Thumbnail: ""
             },
             {
@@ -129,7 +163,7 @@ const tabs = [
 				<a href="https://github.com/MAClavell/Sugarplum-Summit/tree/master/LD40" target="_blank">view the finished project on GitHub</a>.
                 </p>`,
                 VideoLink: "https://www.youtube.com/embed/_ol4agUfcPw",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/sugarplum.png"
             },
             {
                 Name: "DIE-PARTISAN",
@@ -159,7 +193,7 @@ const tabs = [
                 <br>
                 <a href="https://github.com/MAClavell/DIE-PARTISAN/tree/master/GDAPSIIGame" target="_blank">The full project and documentation is available on GitHub</a>.
                 </p>`,
-                VideoLink: "",
+                VideoLink: "https://www.youtube-nocookie.com/embed/eoYctvoglOQ?rel=0",
                 Thumbnail: ""
             }
         ]
@@ -169,29 +203,76 @@ const tabs = [
         Projects: [ 
             {
                 Name: "Pokémon GO Battle Helper",
-                ShortDesc: "Web tab web tab",
-                LongDesc: "",
+                ShortDesc: "Easily find the best Pokémon types to use in a battle.",
+                LongDesc: `
+                <p>
+                Remembering what types are the most effective against Pokémon is already hard in the main games, and then Pokémon Go adds weather boosting to the equation as well.
+                Ay ay ay! <i>Pokémon GO Battle Helper</i> is a tool mostly created for myself in lieu of google and overly complicated battle simulators.
+                In just two clicks and a Pokémon name, you can see which types would be the most effective against your opponent. No hassle, no extra parameters.
+                </p>
+                <p>
+                The webapp uses JavaScript, CSS, and Vue.js to route between specific views, creating a streamlined process that is insanely simple and intended for the more
+                casual Pokémon GO player who can't remember each and every Pokémon's types.
+                The app features:
+                <ul>
+                    <li>Three ways to get the weather at your location (GPS, Zipcode, and manual selection).</li>
+                    <li>Autofill for every Pokémon in Pokémon GO, so searching can be easy as a few keystrokes.</li>
+                    <li>Remembers your current weather for up to an hour, in case you close out of the page.</li>
+                    <li>Support for desktop and mobile browsers.</li>
+                </ul>
+                <a href="https://people.rit.edu/mac9406/330/projects/PoGo_Type_Helper/" target="_blank">Try it out here!</a>	
+                </p>
+                `,
                 VideoLink: "",
                 Thumbnail: ""
             },
             {
                 Name: "Just Visuals and Beats",
                 ShortDesc: "Web tab web tab",
-                LongDesc: "",
+                LongDesc: `
+                <p>
+                <i>Just Visuals and Beats</i> is an audio visualizer in style of <a href="http://www.justshapesandbeats.com/" target="_blank"><i>Just Shapes and Beats</i></a>.
+				Customize the scene and bop along to your favorite songs from the game. See what unique effects occur for each of the three songs!
+				</p>
+				<p>
+				The visualizer was created entirely in Javascript Canvas, WebAudio and CSS.
+				</p>
+				<p>
+				<a href="https://people.rit.edu/mac9406/330/projects/Audio%20Visualizer/" target="_blank">Experience in Chrome or Firefox.</a>						
+                </p>`,
                 VideoLink: "",
                 Thumbnail: ""
             },
             {
                 Name: "RPG Shopper",
-                ShortDesc: "Web tab web tab",
-                LongDesc: "",
-                VideoLink: "",
+                ShortDesc: "A mobile tabletop GM tool for custom shops.",
+                LongDesc: `
+                <p><i>RPG Shopper</i> aims to help GameMasters of any tabletop RPG with the management of shops and major items and upgrades. 
+                With this tool, GMs are be able to create and customize their own in game shops with various types of modules. 
+				</p>
+                <p>The app is currently in development using Unity3D and undergoing playtesting to get player feedback. 
+                The engine's framework and canvas system streamlines the dev process, and the modular script based system fits well with the design
+				of customizable shops.
+				</p>`,
+                VideoLink: "https://www.youtube.com/embed/F2I8aqIWjbg",
                 Thumbnail: ""
             },
             {
                 Name: "Just Shapes and Leaps",
-                ShortDesc: "Web tab web tab",
-                LongDesc: "",
+                ShortDesc: "An endless 2D runner through a geometric world.",
+                LongDesc: `
+                <p>
+				<i>Just Shapes and Leaps</i> is an endless 2D runner created entirely using the DOM.
+				Press any key to jump as the terrain gets harder and harder to navigate. How far can you go?
+				</p>
+				<p>
+				This game was created entirely using base Javascript and the Document Object Model for one of my classes.
+				I programmed and created the art for the game myself using the visual style from 
+                <a href="http://www.justshapesandbeats.com/" target="_blank"><i>Just Shapes and Beats</i></a>.
+                </p>
+                <p>
+				<a href="https://people.rit.edu/mac9406/230/project2/index.html" target="_blank">Play in browser here.</a>						
+				</p>`,
                 VideoLink: "",
                 Thumbnail: ""
             }

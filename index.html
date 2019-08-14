@@ -23,14 +23,14 @@
 </head>
 
 <body>
-	<div id="navBar">
+	<!--<div id="navBar">
 		<ul>
 			<li><a id="bHome">Home</a></li>
 			<li><a id="bAbout">About Me</a></li>
 			<li><a id="bProjects">Portfolio & Resume</a></li>
 			<li><a id="bContact">Contact Me</a></li>
 		</ul>
-	</div>
+	</div>-->
 
 	<div id="header">
 		<h1>
@@ -55,16 +55,22 @@
 
 	<div id="projectsContainer">
 		<div id="root">
-			<h2>Projects & Resume</h2>
+			<h2>Projects</h2>
 			<div :key="$route.fullPath" id="tabContainer">
 				<tab v-for="(t, index) in tabs" v-bind:name="t.Name" v-bind:index="index"></tab>
 			</div>
 			<div id="routerContainer">
-				<transition name="slide" mode="out-in" enter-active-class="animated fadeInRight"
-					leave-active-class="animated fadeOutLeft">
+				<transition name="fade" mode="out-in" enter-active-class="animated fadeIn"
+					leave-active-class="animated fadeOut">
 					<router-view :key="$route.fullPath"></router-view>
 				</transition>
 			</div>
+		</div>
+		<div id="resume">
+			<h2>Resume</h2>
+			<div class="selectButton"
+				onclick="window.open('media/Michael_Clavell_Resume.pdf')">Click here for full PDF</div>
+			<iframe src="media/Michael_Clavell_Resume.pdf" frameborder="0"></iframe>
 		</div>
 	</div>
 
@@ -89,9 +95,7 @@
 				engines.
 				I also have experience using Lua and Java.
 			</p>
-			<br>
 		</div>
-		<div id="breakAboutProject"></div>
 	</div>
 
 	<div id="contactContainer">
