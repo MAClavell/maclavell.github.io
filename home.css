@@ -361,7 +361,7 @@ TABLET STYLE
         grid-template-columns: repeat(2, 1fr);
     }
     #resume iframe {
-        width: 90vw;
+        width: 90%;
         height: 80vh;
     }
     .projectView {   
