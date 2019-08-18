@@ -72,7 +72,6 @@ Vue.component('projectView', {
     template: `
         <div id="projectContainer">
         <div class="projectView">
-        <br>
             <div class="selectButton" @click="goBack">Go Back</div>
             <h2>{{json.Name}}</h2>
             <div v-html=json.LongDesc></div>
@@ -80,7 +79,6 @@ Vue.component('projectView', {
                 <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="selectButton" @click="goBack">Go Back</div>\
-            <br>
         </div>
         </div>`,
     methods: {
