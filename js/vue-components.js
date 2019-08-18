@@ -53,7 +53,7 @@ Vue.component('projectThumb', {
     template: `
         <div class="thumbView">
             <h3>{{json.Name}}</h3>
-            <img :src=json.Thumbnail alt="thumbnail">
+            <img :src=json.Thumbnail alt="thumbnail" @click="selectProject">
             <div v-html=json.ShortDesc></div>
             <div class="selectButton" @click="selectProject">See More...</div>
         </div>`,

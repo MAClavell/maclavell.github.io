@@ -26,7 +26,7 @@ const tabs = [
                 </p>
                 `,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/engine.png"
             },
             {
                 Name: "Snake on the Water",
@@ -81,8 +81,23 @@ const tabs = [
             },
             {
                 Name: "Night Shift",
-                ShortDesc: "",
+                ShortDesc: "Help a poor old janitor with his nightly duties, while remaining hidden.",
                 LongDesc: `
+                <p>
+                Night Shift is a game revolving around a cute little shadow monster that wishes to help an elderly janitor complete his nightly duties.
+                The creature has good intentions, but they’d better be careful. The old man is frail and scares easily...
+                </p>
+                <p>
+                This short puzzle game was created in Unity3D. My most important tasks included:
+                <ul>
+                    <li>Created a AI system for the Old Man. He prioritzes his own goals, but they can be manipulated by player actions.
+                    <a href="https://github.com/MAClavell/Night-Shift-Old-Man-AI" target="_blank">View a more in depth description on my GitHub.</a></li>
+                    <li>Created a script system for the level and used it to script out the puzzle.</li>
+                    <li>Implemented instruction text on interactible objects and thought bubbles on the Old Man to help guide the player.</li>
+                    <li>Programmed player controls and light sizzling (when player is in a light).</li>
+                </ul>
+                <a href="https://joms.itch.io/night-shift" target="_blank">Play the game on Itch.io.</a>
+                </p>
                 `,
                 VideoLink: "",
                 Thumbnail: "media/thumbnails/night.png"
@@ -255,7 +270,7 @@ const tabs = [
 				of customizable shops.
 				</p>`,
                 VideoLink: "https://www.youtube.com/embed/F2I8aqIWjbg",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/rpg.png"
             },
             {
                 Name: "Just Shapes and Leaps",

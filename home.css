@@ -199,15 +199,19 @@ h2 {
     text-align: center;
 
     max-width: 500px;
-    padding-bottom: 40px;
 }
-
 .thumbView h3 {
     margin: 0;
     font-size: 25px;
 }
 .thumbView img {
+    transition: all 0.3s ease-in-out;  
     margin: 10px 0;
+    opacity: 1;
+}
+.thumbView img:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 .thumbView .selectButton {
     margin: 10px 0;
