@@ -6,6 +6,7 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
     padding: 0;
+    min-width: 320px;
 }
 a:link {
 	color: #F29B0F;
@@ -18,15 +19,16 @@ img {
     max-width: 100%;
 }
 h1 {
-    font-size: 3.5em;
+    font-size: 118px;
     margin: 0;
     font-weight: normal;
 }
 h2 {
-    font-size: 2em;
+    font-size: 40px;
     margin: 0;
     padding: 30px 0;
     font-weight: normal;
+    font-family: 'Raleway', sans-serif;
 }
 
 .animated {
@@ -51,43 +53,6 @@ h2 {
     cursor: pointer;
 }
 
-
-/* NAV BAR */
-
-#navBar {
-	position: fixed;
-	width: 100vw;
-	height: 50px;
-	background-color: #6EC5B8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#navBar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#navBar li a {
-    text-align: center;
-    padding: 16px 20px;
-    text-decoration: none;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-}
-
-#navBar li a:hover {
-    background-color: #C7BAA7;
-}
-
-
 /* SOCIAL MEDIA BUTTONS */
 
 .socialMediaButtons {
@@ -95,6 +60,8 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .button{
@@ -113,7 +80,8 @@ h2 {
 }
 
 .email {
-
+    background-image: url("media/mail.png");
+    background-size: 35px;
 }
 .linkedIn {
     background-image: url("media/linkedin.png");
@@ -136,7 +104,7 @@ h2 {
 	cursor: pointer;
 }
 .email:hover {
-    
+    background-color: #757272;
 }
 .handshake:hover {
     background-color: #fccd32;
@@ -165,7 +133,6 @@ h2 {
     font-size: 200%;
 
     height: 100vh;
-    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -173,7 +140,7 @@ h2 {
     align-items: center;
 }
 #header h2 {
-    font-size: 1.5em;
+    font-size: 48px;
     margin: 0;
     padding: 30px 0;
     font-weight: normal;
@@ -183,7 +150,6 @@ h2 {
 /* PROJECTS */
 
 #projectsContainer {
-    width: 100%;
     background-color: #ffac00;
 }
 
@@ -220,9 +186,10 @@ h2 {
 
 #tabView {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    margin: 2em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin: 20px;
 }
 
 .thumbView {
@@ -231,12 +198,13 @@ h2 {
     align-items: center;
     text-align: center;
 
-    margin-bottom: 1em;
+    max-width: 500px;
+    padding-bottom: 40px;
 }
 
 .thumbView h3 {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 25px;
 }
 .thumbView img {
     margin: 10px 0;
@@ -265,7 +233,26 @@ h2 {
     flex-direction: column;
     align-items: center;
 
-    max-width: 50em;
+    max-width: 850px;
+}
+.projectView h2{
+    text-align: center;
+}
+.videoContainer {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+    overflow:hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.videoContainer iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
 
 
@@ -288,7 +275,7 @@ h2 {
 
 #resume iframe {
     margin-top: 30px;
-    width: 800px;
+    width: 768px;
     height: 800px;
 }
 
@@ -296,7 +283,6 @@ h2 {
 /* ABOUT ME */
 #aboutContainer { 
     background-color: #F0F0F0;
-    width: 100%;
     
     display: flex;
     flex-direction: column;
@@ -305,12 +291,9 @@ h2 {
 
 #about {
 	background-color: #F0F0F0;
-    min-height: 20em;
-	padding-left: 2em;
-    padding-right: 2em;
     padding-bottom: 30px;
     width: 90%;
-    max-width: 40em;
+    max-width: 640px;
 }
 
 #about h2 {
@@ -322,7 +305,6 @@ h2 {
 
 #contactContainer { 
 	background-color: #ffac00;
-    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -331,9 +313,7 @@ h2 {
 
 #contact {
 	text-align: center;
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-bottom: 1em;
+	padding-bottom: 20px;
 	color: black;
 }
 
@@ -343,94 +323,80 @@ h2 {
     align-items: center;
     justify-content: center;
 
-    padding-top: 1em;
-    padding-bottom: 1em;
-	width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
 	background-color: #ffac00;
 }
+
+/*
+**********************************
+BIG BOI STYLE
+**********************************
+*/
+@media screen and (max-width: 2140px) {
+    #tabView {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/*
+**********************************
+TABLET STYLE
+**********************************
+*/
+@media screen and (max-width: 890px) {
+    h1 {
+        font-size: 80px;
+    }
+    #header h2 {
+        font-size: 33px;
+    }
+    #tabView {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #resume iframe {
+        width: 90vw;
+        height: 80vh;
+    }
+    .projectView {   
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width: 580px) {
+    h1 {
+        font-size: 60px;
+    }
+    #header h2 {
+        font-size: 23px;
+    }
+}
+
 
 /*
 **********************************
 MOBILE STYLE
 **********************************
 */
-@media screen and (max-width: 640px) {
-    
-    body {
-        width: 100%;
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 50px;
     }
-    
-    iframe {
-        height: 80%;
-        width: 80%;
+    #header h2 {
+        font-size: 20px;
     }
-    
-    #buttonsContainer {
-        position: static;
-        width: 100%;
-        height: auto;
+    #tabView {
+        grid-template-columns: repeat(1, 1fr);
     }
-    
-    #buttons {
-        width: 100%;
-        background-color: #978B7D;
+    .thumbView {
+        padding-bottom: 10px;
     }
-    
-    #buttons ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+}
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 40px;
     }
-    
-    #buttons li {
-        text-align: center;
-        width: 100%;
-        margin: 0.2em;
-        padding: 0.2em;
-        background-color: #6EC5B8; 
+    #header h2 {
+        font-size: 17px;
     }
-    
-    #buttons li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 0 0;
-        transition: none;
-    }
-    
-    #header {
-        width: 100%;
-        background-attachment: scroll;
-    }
-    
-    #aboutContainer { 
-        width: 100%;
-    }
-
-    #about {
-        width: 75%;
-        max-width: none;
-    }
-    
-    #breakAboutProject {
-        width: 75%;
-        max-width: none;
-    }
-
-    #contactContainer { 
-        width: 100%;
-    }
-
-    #breakProjectContact {
-        width: 75%;
-        max-width: none;
-    }
-   
-
-    #contact {
-        width: 75%;
-        max-width: none;
-    }
-    
 }

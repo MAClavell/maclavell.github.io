@@ -52,7 +52,7 @@ const tabs = [
                 <a href="https://github.com/MAClavell/Snake-on-the-Water" target="_blank">View the finished project on GitHub.</a>
                 </p>`,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/snake.png"
             },
             {
                 Name: "Knight Move 3D",
@@ -77,7 +77,7 @@ const tabs = [
                 <a href="https://github.com/MAClavell/Knight-Move-3D" target="_blank">View the finished project on GitHub.</a>
                 </p>`,
                 VideoLink: "https://www.youtube-nocookie.com/embed/7Ao0NrOcGY0",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/knight.png"
             },
             {
                 Name: "Night Shift",
@@ -85,7 +85,7 @@ const tabs = [
                 LongDesc: `
                 `,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/night.png"
             },
             {
                 Name: "Stellar Standoff",
@@ -108,7 +108,7 @@ const tabs = [
                 <a href="https://joms.itch.io/stellar-standoff" target="_blank">Download from Itch.io.</a>
                 </p>`,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/stellar.png"
             },
             {
                 Name: "VRn't",
@@ -137,7 +137,7 @@ const tabs = [
                 <a href="https://ldjam.com/events/ludum-dare/41/vrnt" target="_blank">view the Ludum Dare page.</a>
                 </p>`,
                 VideoLink: "https://www.youtube.com/embed/guZK64FUALQ",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/vrnt.png"
             },
             {
                 Name: "Sugarplum Summit",
@@ -194,7 +194,7 @@ const tabs = [
                 <a href="https://github.com/MAClavell/DIE-PARTISAN/tree/master/GDAPSIIGame" target="_blank">The full project and documentation is available on GitHub</a>.
                 </p>`,
                 VideoLink: "https://www.youtube-nocookie.com/embed/eoYctvoglOQ?rel=0",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/diepart.png"
             }
         ]
     },
@@ -224,11 +224,11 @@ const tabs = [
                 </p>
                 `,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/pokemon.png"
             },
             {
                 Name: "Just Visuals and Beats",
-                ShortDesc: "Web tab web tab",
+                ShortDesc: "An audio/visual experience based on the popular game.",
                 LongDesc: `
                 <p>
                 <i>Just Visuals and Beats</i> is an audio visualizer in style of <a href="http://www.justshapesandbeats.com/" target="_blank"><i>Just Shapes and Beats</i></a>.
@@ -241,7 +241,7 @@ const tabs = [
 				<a href="https://people.rit.edu/mac9406/330/projects/Audio%20Visualizer/" target="_blank">Experience in Chrome or Firefox.</a>						
                 </p>`,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/justVisuals.png"
             },
             {
                 Name: "RPG Shopper",
@@ -274,7 +274,7 @@ const tabs = [
 				<a href="https://people.rit.edu/mac9406/230/project2/index.html" target="_blank">Play in browser here.</a>						
 				</p>`,
                 VideoLink: "",
-                Thumbnail: ""
+                Thumbnail: "media/thumbnails/justLeaps.png"
             }
         ]
     }

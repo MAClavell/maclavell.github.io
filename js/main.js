@@ -14,6 +14,7 @@ const router = new VueRouter({
     routes // short for `routes: routes`
 });
 
+
 //The main Vue app
 const app = new Vue({
     router, //use a router to switch between pages
@@ -32,3 +33,14 @@ const app = new Vue({
         router.push({ name: 'tab', params: { index: "0" } });
     }
 }).$mount('#root');
+
+function isElementInViewport (el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+}

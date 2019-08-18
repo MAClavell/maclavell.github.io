@@ -28,9 +28,7 @@ Vue.component('tabView', {
     template: `
         <div>
         <div id="tabView">
-            <div v-for="(p, index) in projects">
-                <projectThumb v-bind:json="p" v-bind:index="index"></projectThumb>
-            </div>
+            <projectThumb v-for="(p, index) in projects" v-bind:json="p" v-bind:index="index"></projectThumb>
         </div>
         </div>`,
     created: function () {
@@ -53,17 +51,18 @@ Vue.component('tabView', {
 Vue.component('projectThumb', {
     props: ["json", "index"],
     template: `
-        <div>
         <div class="thumbView">
             <h3>{{json.Name}}</h3>
             <img :src=json.Thumbnail alt="thumbnail">
             <div v-html=json.ShortDesc></div>
             <div class="selectButton" @click="selectProject">See More...</div>
-        </div>
         </div>`,
     methods: {
         selectProject() {
             router.push(`project/${currentTabIndex}-${this.$props.index}`)
+            let scrollTo = document.querySelector("#tabContainer")
+            if(!isElementInViewport(scrollTo))
+                scrollTo.scrollIntoView(true);
         }
     }
 });
@@ -77,7 +76,7 @@ Vue.component('projectView', {
             <div class="selectButton" @click="goBack">Go Back</div>
             <h2>{{json.Name}}</h2>
             <div v-html=json.LongDesc></div>
-            <div v-if="hasVideo">
+            <div class="videoContainer" v-if="hasVideo">
                 <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="selectButton" @click="goBack">Go Back</div>\
