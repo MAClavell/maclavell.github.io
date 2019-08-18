@@ -1,439 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
-		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
-		<link rel="stylesheet" href="home.css" />
-		<script src="jquery-3.1.1.min.js"></script>
-		<meta charset="utf-8" />
-		<title>Michael Clavell</title>
-	</head>
 
-	<body>
-		<div id="buttonsContainer">
-			<div id="buttons">
-				<ul>
-					<li><a id="bHome">Home</a></li>
-					<li><a id="bAbout">About Me</a></li>
-					<li><a id="bProjects">Portfolio & Resume</a></li>
-					<li><a id="bContact">Contact Me</a></li>
-				</ul>
-				<script>
-				$("#bHome").click(function() {
-				document.querySelector('#header').scrollIntoView({ block: "start", behavior: 'smooth' });
-				});
-				$("#bAbout").click(function() {
-				document.querySelector('#aboutContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
-				});
-				$("#bProjects").click(function() {
-				document.querySelector('#projectsContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
-				});
-				$("#bContact").click(function() {
-				document.querySelector('#contactContainer').scrollIntoView({ block: "start", behavior: 'smooth' });
-				});
-				</script>
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8" />
+	<title>Michael Clavell</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="home.css" />
+
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<h1>
+			Michael Clavell
+		</h1>
+		<h2>
+			Gameplay Programming & Full Stack
+		</h2>
+		<div class="socialMediaButtons">
+			<button type="button" class="button email"
+				onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
+			<button type="button" class="button linkedIn"
+				onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+			<button type="button" class="button handshake"
+				onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+			<button type="button" class="button gitHub" 
+				onclick="window.open('https://github.com/MAClavell')"></button>
+			<button type="button" class="button itch" 
+				onclick="window.open('https://joms.itch.io/')"></button>
+		</div>
+	</div>
+
+	<div id="projectsContainer">
+		<div id="root">
+			<h2>Projects</h2>
+			<div :key="$route.fullPath" id="tabContainer">
+				<tab v-for="(t, index) in tabs" v-bind:name="t.Name" v-bind:index="index"></tab>
+			</div>
+			<div id="routerContainer">
+				<transition name="fade" mode="out-in" enter-active-class="animated fadeIn"
+					leave-active-class="animated fadeOut">
+					<router-view :key="$route.fullPath"></router-view>
+				</transition>
 			</div>
 		</div>
-		<div id="header">
-			<br>
-			<br>
-			<h1>
-			Michael Clavell <br/>
-			</h1>
-			
-			<h2>
-				Game Design & Development
-				<br>
-			</h2>
-			<h3>
-				Computer Science
-			</h3>
-			<div id="socialMediaButtons1">
-				<button type="button" class="button" id="buttonLinkedIn1" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-				<button type="button" class="button" id="buttonHandshake1" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-				<button type="button" class="button" id="buttonGitHub1" onclick="window.open('https://github.com/MAClavell')"></button>
-				<button type="button" class="button" id="buttonItch1" onclick="window.open('https://joms.itch.io/')"></button>
+		<div id="resume">
+			<h2>Resume</h2>
+			<div class="selectButton"
+				onclick="window.open('media/Michael_Clavell_Resume.pdf')">Click here for full PDF</div>
+			<iframe src="media/Michael_Clavell_Resume.pdf" frameborder="0"></iframe>
+		</div>
+	</div>
+
+	<div id="aboutContainer">
+		<div id="about">
+			<h2>About Me</h2>
+			<p>
+				My name is Michael Clavell and I am a fourth year student at the Rochester Institute of Technology, 
+				studying for a B.S. in Game Design and Development and a minor in Comptuter Science.
+			</p>
+			<p>
+				My strengths lie in gameplay programming, engine programming, and full stack engineering, 
+				and I have used these skills to make over a dozen games in my academic career (some of which are featured here).
+				My go-to languages are C++ with a custom game engine and C# with Unity3D.
+			</p>
+			<p>
+				Outside of school, I am part of RIT's pep band where I play percussion at hockey games and various other events.
+			</p>
+		</div>
+	</div>
+
+	<div id="contactContainer">
+		<div id="contact">
+			<h2>Contact Me</h2>
+			<div class="socialMediaButtons">
+				<button type="button" class="button email"
+					onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
+				<button type="button" class="button linkedIn"
+					onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
+				<button type="button" class="button handshake"
+					onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
+				<button type="button" class="button gitHub"
+					onclick="window.open('https://github.com/MAClavell')"></button>
+				<button type="button" class="button itch" onclick="window.open('https://joms.itch.io/')"></button>
 			</div>
 		</div>
-		
-		<div id="aboutContainer">	
-			<div id="about">
-				<br>
-				<h2>About Me</h2>
-				<p>
-					My name is Michael Clavell and I have a great passion for games, but it doesn't lie in just playing them. 
-					The who and how behind them is what really gets me excited.
-				</p>
-				<p>
-					I am a second year student at Rochester Institute of Technology studying for a B.S. in Game Design and Development. My focus lies in gameplay
-					programming, scripting, and game engine development. Taking visions and turning them into tangible experiences is a huge part as to why I do what I do.
-				</p>
-				<p>
-					I've worked in C# with the Unity and Monogame engines, as well as C++ with Unreal Engine 4 and other custom engines.
-                    I also have experience using Lua and Java.
-				</p>
-				<br>
-			</div>
-			<div id="breakAboutProject"></div>
-		</div>
-		
-		<div id="projectsContainer">
-			<div id="projects">
-				<h2>Portfolio & Resume</h2>
-				<ul class="tabs-menu">
-					<li class="current"><a href="#tab-1">Personal</a></li>
-					<li><a href="#tab-2">School</a></li>
-					<li><a href="#tab-3">Music</a></li>
-					<li><a href="#tab-4">Resume</a></li>
-				</ul>
-				<div class="tab">
-					<!-- Major Projects -->
-					<div id="tab-1" class="tab-content">
-						<h2>Personal Projects</h2>
-						<hr>
-						<h3> Snake on the Water (in-progress) </h3>
-						<p>
-							<i>Snake on the Water</i> is an in-progress recreation of the classic snake game with a twist and unique graphical effects. Play as your local friendly rescue tugboat and save the 
-							innocent swimmers from the dangerous waters. Make sure to drop them off at the dock! The game features a custom engine created in DirectX which includes water, particles, and animations.
-						</p>
-						<p>
-							Since <i>Snake on the Water</i> and its engine are a WIP title, you can view the github for the most up to date changes. So far
-							I have:
-							<ul>
-								<li>Created the <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">base engine</a>
-									the team is working off of and expanding. This engine supported meshes, textures, shaders, 3 types of lights,
-									a inheritable transform system, inheritable camera system, a renderer, and an input manager.
-								</li>
-							</ul>
-						</p>
-						<p>
-							<a href="https://github.com/rimij405/ggp-smij" target="_blank">View our team's current progress its GitHub page</a>
-						</p>
-						<br>
-						<h3> Knight Move 3D </h3>
-						<p>
-							Knight Move 3D is a recreation of the Famicom/NES game Knight Move. Move around a chess board collecting hearts, just be sure to not fall through!
-							The game is created using Simplex, a C++ based engine made by a professor at the Rochester Institute of Technology.
-						</p>
-						<p>
-							My list of tasks included:
-							<ul>
-								<li>Created the underlying system that controls the game board. This allowed access to each node for easy placement
-									for all entities.
-								</li>
-								<li>Created systems for game management, pickup placement/collection, entity collision, score calculation, and UI.</li>
-								<li>Programmed various polish effects: heart traversal, tile falling/regenerating, tile color changes, etc.</li>
-							</ul>
-						</p>
-						<p>
-							<a href="https://github.com/MAClavell/Knight-Move-3D" target="_blank">View the source code</a>
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7Ao0NrOcGY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-						<br>
-						<h3> Stellar Standoff </h3>
-						<p>
-							You have landed on a recently discovered asteroid that is filled with valuable resources. 
-							Your station wants to horde these resources for themselves. Fire missiles and shield your base in order to be the last space-man standing on this bountiful asteroid.
-						</p>
-						<p>
-							This game was created as a mix between analog and digital for IGME 320. My list of tasks included:
-							<ul>
-								<li>Created sound effects.</li>
-								<li>Composed background music. Made it fade in and out sections depending on the state of the game.</li>
-								<li>Programmed custom audio system for streamlined audio functionality.</li>
-							</ul>
-						</p>
-						<p>
-							<a href="https://joms.itch.io/stellar-standoff" target="_blank">Download from Itch.io</a>
-						</p>
-						<br>
-						<h3> <i>VRn't</i> (Ludum Dare 41)</h3>
-						<p>
-							<i><b>WARNING! INCOMPATIBLE GENRES: VR and Your Living Room.</b></i>
-							<br>
-							Welcome to the virtual world of VRn’t, where the lines between the real and the fantastic are blurred, if only slightly. 
-							You control a humble gamer with a heart of gold and an expensive VR rig. Help him defeat ninjas in the digital dojo, 
-							and PLEASE mind the furniture.
-						</p>
-						<p>
-							Ranked #17 in Humor out of 2000+ entries,
-							this game was created for Ludum Dare 41's theme of "combine 2 incompatible genres",
-							this 2D brawler has you split your attention between two realities.
-							Defend yourself from endless waves of bloodthirsty ninjas while also trying
-							to keep your living room intact (or not!).
-						</p>
-						<p>
-							This was a team project where I: 
-							<ul>
-								<li>Was the main programmer. In under 48 hours I programmed player controls,
-									enemy AI, obstacles, and other gameplay elements.</li>
-								<li>Composed two music tracks and created all sound effects in the game.</li>
-								<li>Managed the team and dividing tasks between us.</li>
-							</ul>
-						</p>
-						<p>
-							<a href="https://joms.itch.io/vrnt" target="_blank">Play in browser on Itch.io</a>.
-							<br>
-							<a href="https://ldjam.com/events/ludum-dare/41/vrnt" target="_blank">View the Ludum Dare page</a>.
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/guZK64FUALQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-						<br>
-						<h3> <i>Sugarplum Summit</i> (Ludum Dare 40) </h3>
-						<p> Fly to the top of the Christmas Tree in <i>Sugarplum Summit</i>! This Christmas themed SHMUP was created for Ludum Dare 40's theme of "The more you have, the worse it is".
-						Free Christmas angels from their ornamental cages. They will help you make haste of your mission, but be wary of their allegiances.
-						</p>
-						<p>
-						The team for <i>Sugarplum Summit</i> consisted of three people. My role was team lead and sole programmer. The game was submitted for the "Jam" so we had 72 hours to create it. I also spent an additional 15 hours updating the game to a PostJam version.
-						My responsibilities included:
-						</p>
-						<ul>
-							<li>Coded all aspects of the game, from the player moving to the scripted boss fight at the summit.</li>
-							<li>Designed three main enemies, a boss, and generally balanced the game.</li>
-							<li>Created milestones for my team mates and I to stay on track and effectively budget our time.</li>
-							<li>Recorded some sound effects for actions in the game.</li>
-						</ul>
-						<p>
-						<a href="https://joms.itch.io/sugarplum-summit" target="_blank">Play in browser on Itch.io</a>.
-						<br>
-						<a href="https://ldjam.com/events/ludum-dare/40/sugarplum-summit" target="_blank">View the Ludum Dare page</a>.
-						<br>
-						<a href="https://github.com/MAClavell/Sugarplum-Summit/tree/master/LD40" target="_blank">The full project and documentation is available on GitHub</a>.
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/_ol4agUfcPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-						<br>
-						<h3> <i>RPG Shopper</i> (In progress) </h3>
-						<p><i>RPG Shopper</i> aims to help GameMasters of any tabletop RPG with the management of shops and major items and upgrades. With this tool, GMs will be able to create and customize
-						their own in game shops with various types of modules. Some examples include single purchase items, upgradeable tiers, and progression trees.
-						</p>
-						<p>The app is currently in development using Unity3D. The engine's framework and canvas system streamlines the dev process, and the modular script based system fits well with the design
-						of customizable shops. I have completed a prototpye that I am currently playtesting in a D&D campaign.
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/F2I8aqIWjbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-						<br>
-						<h3> <i>DIE-PARTISAN</i> </h3>
-						<p><i>DIE-PARTISAN</i> is a 2D twin stick shooter created by myself and three other RIT students in the Monogame engine. The game focuses on Lucifer as he fights his way through infinite, randomly stitched together levels, battling mysterious rogue angels bent on the destruction of Heaven and Hell.
-						</p>
-						<p>
-						The development of <i>DIE-PARTISAN</i> was over the course of four months in early 2017. During this time I acted as project leader and oversaw timelines and schedules while developing with the rest of the team. Other than leader, my major responsibilities included:
-						</p>
-						<ul>
-							<li>Programmed player movement, controls, and actions.</li>
-							<li>Developed a method for tile textures to be procedurally bitmapped onto the map. This allowed us to paint maps with our development tool and have the game place the textures.</li>
-							<li>Created the AI for turret enemies.</li>
-							<li>Used multithreading to create optimizations in various aspects of the game.</li>
-							<li>Basic menu, game state, and class management</li>
-						</ul>
-						
-						<p>
-						<a href="https://joms.itch.io/die-partisan" target="_blank">Game available on Itch.io</a>.
-						<br>
-						<a href="https://github.com/MAClavell/DIE-PARTISAN/tree/master/GDAPSIIGame" target="_blank">The full project and documentation is available on GitHub</a>.
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoYctvoglOQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-					</div>
-					
-					<!-- Schoolwork -->
-					<div id="tab-2" class="tab-content">
-						<h2>School Projects</h2>
-						<hr>
-						<h3> Just Visuals and Beats </h3>
-						<p>
-						<i>Just Visuals and Beats</i> is an audio visualizer in style of <a href="http://www.justshapesandbeats.com/" target="_blank"><i>Just Shapes and Beats</i></a>.
-						It features unique effects for each of the three songs as well as many customizable controls to play with.
-						</p>
-						<p>
-							The visualizer was created in Javascript using the Canvas element. It also features custom CSS.
-						</p>
-						<p>
-						<a href="https://people.rit.edu/mac9406/330/projects/Audio%20Visualizer/" target="_blank">Experience in Chrome or Firefox.</a>						
-						</p>
-						<br>
-						<h3> Just Shapes and Leaps </h3>
-						<p>
-						<i>Just Shapes and Leaps</i> is an endless 2D runner created entirely using the DOM.
-						Press any key to jump as the terrain gets harder and harder to navigate. How far can you go?
-						</p>
-						<p>
-						This game was created entirely using base Javascript and the Document Object Model for one of my classes.
-						I programmed and created the art for the game myself using the visual style from 
-						<a href="http://www.justshapesandbeats.com/" target="_blank"><i>Just Shapes and Beats</i></a>.
-						</p>
-						<p>
-						<a href="https://people.rit.edu/mac9406/230/project2/index.html" target="_blank">Play in browser.</a>						
-						</p>
-						<br>
-						<h3> Polygons </h3>
-						<p><i>Polygons</i> is a reimagining of the classic arcade game, <i>Asteroids</i>. Players must maneuver, dash, and shoot their way through an endless amount of
-						dangerous geometry. Do you have what it takes to survive the perils of the second dimension?
-						</p>
-						<p>
-						While this assignment was created using Unity3D, I was tasked to create an asteroids clone by not using some built-in Unity3D functions. Instead, I had to
-						create my own vector and physics based movement as well as my own collision detection. I added some animations and effects to create a more engaging experience.
-						</p>
-						<p>
-						<a href="https://joms.itch.io/polygons" target="_blank">Play in browser on itch.io.</a>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/-TFdl9Q-CUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-						<br>
-						<h3> Humans vs. Zombies</h3>
-						<p>A rumored asteroid landing in the swamps outside a southern city has caused the military to panic, sending out troops to recover the potentially dangerous object.
-						Little did they know that the asteroid carries an alien virus that turns humans into brain hungry monsters. It is a fight for survival in this exciting simulation of
-						<i>Humans vs. Zombies</i>!
-						</p>
-						<p>
-						Using Unity3D, I was tasked to create a Humans vs. Zombies simulation using Craig Reynold's steering behaviors as a basis. The agents have their own behaviors: zombies
-						will pursue the closest human, while humans will evade zombies that are chasing them. Humans also have the ability to fight back if they are together in groups of three.
-						The result is an interesting simulation where the outcome can change any second.
-						</p>
-						<p style="text-align: center;">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/OfuJc3Jt5Ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</p>
-					</div>
-					<!-- Music -->
-					<div id="tab-3" class="tab-content">
-						<h2>Music Projects</h2>
-						<hr>
-						<br>
-						
-						Crisis On CR1515 [2018]
-						<br>
-						<audio controls preload="none">
-							  <source src="media/audio/Crisis_On_CR1515.mp3" type="audio/mp3">
-							Your browser does not support the audio element.
-						</audio>
+	</div>
 
-						<br>
-						<hr>
-						<br>
-						
-						A Small Disagreement in the Dojo [2018]
-						<br>
-						<audio controls preload="none">
-							  <source src="media/audio/A_Small_Disagreement_in_the_Dojo.mp3" type="audio/mp3">
-							Your browser does not support the audio element.
-						</audio>
+	<div id="copyright">&#169; Michael Clavell, 2019</div>
 
-						<br>
-						<hr>
-						<br>
+	<script src="js/project-data.js"></script>
+	<script src="js/vue-components.js"></script>
+	<script src="js/main.js"></script>
+</body>
 
-						Loading Screen [2018]
-						<br>
-						<audio controls preload="none">
-							  <source src="media/audio/Loading_Screen.mp3" type="audio/mp3">
-							Your browser does not support the audio element.
-						</audio>
-
-						<br>
-						<hr>
-						<br>
-
-						Pokemon - Unwavering Emotions [Remix] [2016]
-						<br>
-						<audio controls preload="none">
-							  <source src="media/audio/Unwavering_Emotions.mp3" type="audio/mp3">
-							Your browser does not support the audio element.
-						</audio>
-
-						<br>
-						<hr>
-						<br>
-
-						Undertale - Spider Dance [Remix] [2016]
-						<br>
-						<audio controls preload="none">
-							  <source src="media/audio/Spider_Dance.mp3" type="audio/mp3">
-							  Your browser does not support the audio element.
-						</audio>
-						
-						<br>
-						<hr>
-						<br>
-					</div>
-					<!-- Resume -->
-					<div id="tab-4" class="tab-content">
-						<h2>Resume</h2>
-						<hr>
-						<a href="media/Michael_Clavell_Resume.pdf" target="_blank">Click for PDF.</a>
-						<br>
-						<br>
-						Preview:
-						<p>
-						<a href="media/Michael_Clavell_Resume.pdf" target="_blank">
-						<img src="media/Michael_Clavell_Resume.png" alt="Resume" style="width:638px;height:825px;">
-						</a>
-						</p>
-					</div>
-				<script>
-					$(document).ready(function() {
-						$(".tabs-menu a").click(function(event) {
-							event.preventDefault();
-							$(this).parent().addClass("current");
-							$(this).parent().siblings().removeClass("current");
-							let tab = $(this).attr("href");
-							$(".tab-content").not(tab).css("display", "none");
-							$(tab).fadeIn();
-						});
-					});
-				</script>
-				</div>
-			</div>
-		</div>
-		<!--
-		http://www.jqueryrain.com/example/jquery-tabs/
-		-->
-
-		<div id="contactContainer">
-			<div id="breakProjectContact"></div>
-			<div id="contact">
-				<h2>Contact Me</h2>
-				<div id="contactContent">
-					<div id="contactLogo">
-						<img src="media/MyLogo.png" alt="Logo" width="261" height="132">
-					</div>
-					<div id="contactButtons">
-						<div  id="contactEmail"> 
-							<p>
-							Email
-							<br>
-							<a href="mailto:mac9406@g.rit.edu">mac9406@g.rit.edu</a>
-							</p>
-						</div>
-						<div id="socialMediaButtons2">
-							<button type="button" class="button" id="buttonLinkedIn2" onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-							<button type="button" class="button" id="buttonHandshake2" onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-							<button type="button" class="button" id="buttonGitHub2" onclick="window.open('https://github.com/MAClavell')"></button>
-							<button type="button" class="button" id="buttonItch2" onclick="window.open('https://joms.itch.io/')"></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div id="copyright"> <br/>&#169; Michael Clavell, 2018 <br> Game Design and Development</div>
-
-
-		<!--
-		MODAL IMAGES
-		http://www.w3schools.com/howto/howto_css_modal_images.asp
-		-->
-	</body>
 </html>
