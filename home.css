@@ -277,7 +277,6 @@ h2 {
 #resume .selectButton:hover {
     background-color: rgb(123, 218, 203);
 }
-
 #resume iframe {
     margin-top: 30px;
     width: 768px;
@@ -361,8 +360,7 @@ TABLET STYLE
         grid-template-columns: repeat(2, 1fr);
     }
     #resume iframe {
-        width: 90%;
-        height: 80vh;
+        display: none;
     }
     .projectView {   
         max-width: 90vw;
