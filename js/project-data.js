@@ -33,7 +33,7 @@ const tabs = [
                 ShortDesc: "A nautical recreation of <i>Snake</i> in a custom-built C++ game engine.",
                 LongDesc:
                 `<p>
-                <i>Snake on the Water</i> is an in-progress recreation of the classic snake game with a twist and unique graphical effects. 
+                <i>Snake on the Water</i> is a recreation of the classic snake game with a twist and unique graphical effects. 
                 Play as your local friendly rescue boat and save the innocent swimmers from the dangerous waters.
                 </p>
                 <p>
@@ -51,7 +51,7 @@ const tabs = [
                 </ul>
                 <a href="https://github.com/MAClavell/Snake-on-the-Water" target="_blank">View the finished project on GitHub.</a>
                 </p>`,
-                VideoLink: "",
+                VideoLink: "https://www.youtube-nocookie.com/embed/XmcqrdMxTLA",
                 Thumbnail: "media/thumbnails/snake.png"
             },
             {
@@ -99,7 +99,7 @@ const tabs = [
                 <a href="https://joms.itch.io/night-shift" target="_blank">Play the game on Itch.io.</a>
                 </p>
                 `,
-                VideoLink: "",
+                VideoLink: "https://www.youtube-nocookie.com/embed/e4N5cy8rdtc",
                 Thumbnail: "media/thumbnails/night.png"
             },
             {
@@ -122,7 +122,7 @@ const tabs = [
                 </ul>
                 <a href="https://joms.itch.io/stellar-standoff" target="_blank">Download from Itch.io.</a>
                 </p>`,
-                VideoLink: "",
+                VideoLink: "https://www.youtube-nocookie.com/embed/DgspRnFU7oI",
                 Thumbnail: "media/thumbnails/stellar.png"
             },
             {
@@ -151,7 +151,7 @@ const tabs = [
                 or
                 <a href="https://ldjam.com/events/ludum-dare/41/vrnt" target="_blank">view the Ludum Dare page.</a>
                 </p>`,
-                VideoLink: "https://www.youtube.com/embed/guZK64FUALQ",
+                VideoLink: "https://www.youtube-nocookie.com/embed/guZK64FUALQ",
                 Thumbnail: "media/thumbnails/vrnt.png"
             },
             {
@@ -177,7 +177,7 @@ const tabs = [
                 <a href="https://ldjam.com/events/ludum-dare/40/sugarplum-summit" target="_blank">view the Ludum Dare page</a>, or
 				<a href="https://github.com/MAClavell/Sugarplum-Summit/tree/master/LD40" target="_blank">view the finished project on GitHub</a>.
                 </p>`,
-                VideoLink: "https://www.youtube.com/embed/_ol4agUfcPw",
+                VideoLink: "https://www.youtube-nocookie.com/embed/_ol4agUfcPw",
                 Thumbnail: "media/thumbnails/sugarplum.png"
             },
             {
@@ -269,7 +269,7 @@ const tabs = [
                 The engine's framework and canvas system streamlines the dev process, and the modular script based system fits well with the design
 				of customizable shops.
 				</p>`,
-                VideoLink: "https://www.youtube.com/embed/F2I8aqIWjbg",
+                VideoLink: "https://www.youtube-nocookie.com/embed/F2I8aqIWjbg",
                 Thumbnail: "media/thumbnails/rpg.png"
             },
             {
