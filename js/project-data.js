@@ -17,6 +17,7 @@ const tabs = [
                     <li>An optimized rendering system that reduces the amount of data sent to the GPU by organizing GameObjects by their material and mesh.</li>
                     <li>A component system akin to Unity3D, where developers can add multiple components to a base GameObject.</li>
                     <li>An integrated rigidbody physics world utilizing NVIDIA PhysX 4.1.</li>
+                    <li><a href="https://blog.molecular-matters.com/2015/08/24/job-system-2-0-lock-free-work-stealing-part-1-basics/" target="_blank">A lock-free, work stealing job system</a></li>
                     <li>GameObject parenting</li>
                     <li>Support for PBR and direct lighting.</li>
                     <li>Shadow mapping for directional lights.</li>
