@@ -3,25 +3,28 @@ const tabs = [
         Name: "Desktop",
         Projects: [
             {
-                Name: "C++ Game Engine",
+                Name: "Rescue+ Game Engine",
                 ShortDesc: "An on-going personal project to create a game engine in C++.",
                 LongDesc: `
                 <p>
                 Once <i>Snake on the Water</i> concluded, I wanted to expand my knowledge on how game engines worked,
-                 so I've been working on this untitled engine in my free time.
-                It is created in C++ utilizing DirectX for rendering and PhysX for physics.
+                 so I've been working on the aptly named <i>Rescue+ Game Engine</i> in my free time.
+                It is written in C++ utilizing DirectX 11 for rendering and the PhysX API for physics.
                 </p>
                 <p>
-                Some of it's features include:
+                Some of its features include:
                 <ul>
-                    <li>An optimized rendering system that reduces the amount of data sent to the GPU by organizing GameObjects by their material and mesh.</li>
-                    <li>A component system akin to Unity3D, where developers can add multiple components to a base GameObject.</li>
-                    <li>An integrated rigidbody physics world utilizing NVIDIA PhysX 4.1.</li>
-                    <li><a href="https://blog.molecular-matters.com/2015/08/24/job-system-2-0-lock-free-work-stealing-part-1-basics/" target="_blank">A lock-free, work stealing job system</a></li>
-                    <li>GameObject parenting</li>
-                    <li>Support for PBR and direct lighting.</li>
-                    <li>Shadow mapping for directional lights.</li>
-                    <li>Transparency and blending</li>
+                    <li>GameObject/Component system for ease of implementing and reusing behaviours.</li>
+                    <li>GameObject parenting that updates child transforms.</li>
+                    <li>PhysX API including rigidBodies, colliders, raycasts and collision callbacks.</li>
+                    <li>Bucket-sorted rendering to minimize the memory sent to the GPU.</li>
+                    <li><a href="https://blog.molecular-matters.com/2015/08/24/job-system-2-0-lock-free-work-stealing-part-1-basics/" target="_blank">A Lock-free work stealing Job System.</a></li>
+                    <li>An async-enabled Resource Manager for loading multiple types of assets.</li>
+                    <li>A Input Manager for detecting keyboard and mouse input.</li>
+                    <li>Support for diffuse lighting or Physically Based Rendering.</li>
+                    <li>Transparency/blending.</li>
+                    <li>Shadows for directional lights.</li>
+                    <li>Config file (currently only supports framerate caps).</li>
                 </ul>
                 <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">Check out my progress project on GitHub.</a>
                 </p>
