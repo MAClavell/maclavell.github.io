@@ -4,6 +4,7 @@ const tabs = [
         Projects: [
             {
                 Name: "Rescue+ Game Engine",
+                Role: "Solo Project - Engine Programmer",
                 ShortDesc: "An on-going personal project to create a game engine in C++.",
                 LongDesc: `
                 <p>
@@ -29,11 +30,12 @@ const tabs = [
                 <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">Check out my progress project on GitHub.</a>
                 </p>
                 `,
-                VideoLink: "",
+                VideoLink: "https://www.youtube.com/embed/96H2_ydlltg",
                 Thumbnail: "media/thumbnails/engine.png"
             },
             {
                 Name: "Snake on the Water",
+                Role: "Team Project - Gameplay Programmer, Engine Programmer, & Team Lead",
                 ShortDesc: "A nautical recreation of <i>Snake</i> in a custom-built C++ game engine.",
                 LongDesc:
                 `<p>
@@ -60,6 +62,7 @@ const tabs = [
             },
             {
                 Name: "Knight Move 3D",
+                Role: "Team Project - Gameplay Programmer",
                 ShortDesc: "A 3D recreation of the retro Famicom/NES game <i>Knight Move</i> in C++, with an added feature.",
                 LongDesc: 
                 `<p>
@@ -84,7 +87,35 @@ const tabs = [
                 Thumbnail: "media/thumbnails/knight.png"
             },
             {
+                Name: "Technical Support",
+                Role: "Team Project - Gameplay Programmer",
+                ShortDesc: "Defend yourself against hordes of angry robots in this mobile tower defense game.",
+                LongDesc: `
+                <p>
+                The robots have risen up! Artificial life has finally grown self aware and they have begun manufacturing an endless army of robot warriors. 
+                Only heavy weaponry can combat these troops so the government has outfitted you with a heavy armored vehicle capable of producing turret stations so long as you have the parts. 
+                Luckily you can loot parts from the robots you destroy. 
+                You have been deployed to the middle of the robotic army. 
+                The future of the human race is dependent on you wiping out as many of those cybernetic slaughterers as possible.
+                </p>
+                <p>
+                This mobile tower defense game was created in Unity3D. As a gameplay programmer, my tasks included:
+                <ul>
+                    <li>Created WebGL-optimized systems that utilize object pooling for spawning mass amounts of robots and currency.</li>
+                    <li>Designed and implemented AI for the robots. How they decide what target to chase, when to attack, etc.</li>
+                    <li>Programmed the player's "build mode" which allows for turret spawning, upgrading, and radius displaying.</li>
+                    <li>Balanced the game by tweaking speeds, damages, prices, and spawning rates.</li>
+                </ul>
+                <a href="https://joms.itch.io/technical-support" target="_blank">Play the game on Itch.io.</a> or
+                <a href="https://github.com/MAClavell/Technical-Support" target="_blank">view the finished project on GitHub</a>.
+                </p>
+                `,
+                VideoLink: "https://www.youtube.com/embed/-Inr86zhVXw",
+                Thumbnail: "media/thumbnails/techsupport.png"
+            },
+            {
                 Name: "Night Shift",
+                Role: "Team Project - Gameplay Programmer & Team Lead",
                 ShortDesc: "Help a poor old janitor with his nightly duties, while remaining hidden.",
                 LongDesc: `
                 <p>
@@ -108,6 +139,7 @@ const tabs = [
             },
             {
                 Name: "Stellar Standoff",
+                Role: "Team Project - Composer, SFX Artist, & Audio Programmer",
                 ShortDesc: "Mine, shoot, shield, and reflect in this hectic eight player standoff.",
                 LongDesc: `
                 <p>
@@ -131,6 +163,7 @@ const tabs = [
             },
             {
                 Name: "VRn't",
+                Role: "Team Project - Gameplay Programmer, Team Lead, Composer, & SFX Artist",
                 ShortDesc: "WARNING! INCOMPATIBLE GENRES: VR and Your Living Room.",
                 LongDesc: `
                 <p>
@@ -148,7 +181,7 @@ const tabs = [
                 <p>
                 My tasks included: 
                 <ul>
-                    <li>Lead gameplay programmer, programming player controls, enemy AI, moving and unmoving obstacle system, and the overall gameplay logic.</li>
+                    <li>Lead gameplay programmer, programming player controls, enemy AI, moving and static obstacle system, and the overall gameplay logic.</li>
                     <li>Composed two music tracks and created all sound effects in the game.</li>
                 </ul>
                 <a href="https://joms.itch.io/vrnt" target="_blank">Play in browser on Itch.io</a>
@@ -160,6 +193,7 @@ const tabs = [
             },
             {
                 Name: "Sugarplum Summit",
+                Role: "Team Project - Gameplay Programmer & Team Lead",
                 ShortDesc: "Fly to the top of the Christmas tree battling fiendish ornaments and freeing innocent(?) angels along the way.",
                 LongDesc: `
                 <p> 
@@ -186,6 +220,7 @@ const tabs = [
             },
             {
                 Name: "DIE-PARTISAN",
+                Role: "Team Project - Gameplay Programmer & Team Lead",
                 ShortDesc: "Battle your way through Heaven in this devilishly fun top-down shooter",
                 LongDesc: `
                 <p><i>DIE-PARTISAN</i> is a 2D twin stick shooter created in the c# Monogame engine.
@@ -222,6 +257,7 @@ const tabs = [
         Projects: [ 
             {
                 Name: "Pokémon GO Battle Helper",
+                Role: "Solo Project - UI Programmer",
                 ShortDesc: "Easily find the best Pokémon types to use in a battle.",
                 LongDesc: `
                 <p>
@@ -247,6 +283,7 @@ const tabs = [
             },
             {
                 Name: "Just Visuals and Beats",
+                Role: "Solo Project - UI Programmer & Effects Programmer",
                 ShortDesc: "An audio/visual experience based on the popular game.",
                 LongDesc: `
                 <p>
@@ -264,6 +301,7 @@ const tabs = [
             },
             {
                 Name: "RPG Shopper",
+                Role: "Solo Project - UI Programmer",
                 ShortDesc: "A mobile tabletop GM tool for custom shops.",
                 LongDesc: `
                 <p><i>RPG Shopper</i> aims to help GameMasters of any tabletop RPG with the management of shops and major items and upgrades. 
@@ -278,6 +316,7 @@ const tabs = [
             },
             {
                 Name: "Just Shapes and Leaps",
+                Role: "Solo Project - Gameplay Programmer",
                 ShortDesc: "An endless 2D runner through a geometric world.",
                 LongDesc: `
                 <p>

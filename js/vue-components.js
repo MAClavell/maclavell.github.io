@@ -74,6 +74,7 @@ Vue.component('projectView', {
         <div class="projectView">
             <div class="selectButton" @click="goBack">Go Back</div>
             <h2>{{json.Name}}</h2>
+            <div class="role">{{json.Role}}</div>
             <div v-html=json.LongDesc></div>
             <div class="videoContainer" v-if="hasVideo">
                 <iframe width="560" height="315" :src="json.VideoLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
