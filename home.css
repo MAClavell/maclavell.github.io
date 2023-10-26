@@ -87,10 +87,6 @@ h2 {
     background-image: url("media/linkedin.png");
     background-size: 30px;
 }
-.handshake {
-    background-image: url("media/handshake.png");
-    background-size: 35px;
-}
 .gitHub {
     background-image: url("media/github.png");
     background-size: 45px;
@@ -105,9 +101,6 @@ h2 {
 }
 .email:hover {
     background-color: #757272;
-}
-.handshake:hover {
-    background-color: #fccd32;
 }
 .linkedIn:hover {
     background-color: #1c78b2;
@@ -150,7 +143,7 @@ h2 {
 /* PROJECTS */
 
 #projectsContainer {
-    background-color: #ffac00;
+    background-color: #f0f0f0;
 }
 
 #root {
@@ -159,37 +152,15 @@ h2 {
     align-items: center;
 }
 
-#tabContainer {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.tab {
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 25px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-.tab:hover {
-    cursor: pointer;
-}
-
 #routerContainer {
-    background-color: #f0f0f0;
     width: 100%;
+    max-width: fit-content;
 }
 
-#tabView {
+#projectsGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    margin: 20px;
 }
 
 .thumbView {
@@ -206,7 +177,6 @@ h2 {
 }
 .thumbView img {
     transition: all 0.3s ease-in-out;  
-    margin: 10px 0;
     opacity: 1;
 }
 .thumbView img:hover {
@@ -281,7 +251,7 @@ h2 {
 #resume .selectButton:hover {
     background-color: rgb(123, 218, 203);
 }
-#resume iframe {
+#resume embed {
     margin-top: 30px;
     width: 768px;
     height: 800px;
@@ -301,7 +271,7 @@ h2 {
 	background-color: #F0F0F0;
     padding-bottom: 30px;
     width: 90%;
-    max-width: 640px;
+    max-width: 900px;
 }
 
 #about h2 {
@@ -342,7 +312,7 @@ BIG BOI STYLE
 **********************************
 */
 @media screen and (max-width: 2140px) {
-    #tabView {
+    #projectsGrid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -360,10 +330,10 @@ TABLET STYLE
     #header h2 {
         font-size: 33px;
     }
-    #tabView {
+    #projectsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
-    #resume iframe {
+    #resume embed {
         display: none;
     }
     .projectView {   
@@ -392,11 +362,8 @@ MOBILE STYLE
     #header h2 {
         font-size: 20px;
     }
-    #tabView {
+    #projectsGrid {
         grid-template-columns: repeat(1, 1fr);
-    }
-    .thumbView {
-        padding-bottom: 10px;
     }
 }
 @media screen and (max-width: 350px) {

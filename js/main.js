@@ -1,38 +1,39 @@
-let currentTabIndex = 0;
-
-const tabViewTemplate = { template: '<tabView></tabView>' }
+const projectsGridTemplate = { template: '<projectsGrid></projectsGrid>' }
 const projectViewTemplate = { template: '<projectView></projectView>' }
 
 //All routes in the app
 const routes = [
-    { path: '/:index', name: 'tab', component: tabViewTemplate, props: true },
-    { path: '/project/:project', name: 'project', component: projectViewTemplate, props: true },
+    { path: '/', name: 'ProjectsGrid', component: projectsGridTemplate, props: true },
+    { path: '/project/:project', name: 'Project', component: projectViewTemplate, props: true },
 ]
 
 //The VueRouter
-const router = new VueRouter({
-    routes // short for `routes: routes`
+const router = VueRouter.createRouter({
+    history: VueRouter.createWebHashHistory(),
+    routes
 });
 
-
 //The main Vue app
-const app = new Vue({
-    router, //use a router to switch between pages
-    data: {
-        tabs: []
-    },
-    methods: {
-        //Go to the home page (weather selection)
-        exitProject() {
-
-        }
+const app = Vue.createApp({
+    data() {
+        return { projectsData: [] }
     },
     created() {
         //Initial values
-        this.$data.tabs = tabs;
-        router.push({ name: 'tab', params: { index: "0" } });
-    }
-}).$mount('#root');
+        this.$data.projectsData = projectsData;
+        router.push(`/`);
+    },
+    template: `
+    <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+            <component :is="Component" />
+        </transition>
+    </router-view>
+    `
+});
+
+createComponents();
+app.use(router).mount('#routerContainer');
 
 function isElementInViewport (el) {
     var rect = el.getBoundingClientRect();

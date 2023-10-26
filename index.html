@@ -17,9 +17,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="home.css" />
 
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<!-- 
+	<script src="https://unpkg.com/vue@3.3.7/dist/vue.global.js"></script>
+	<script src="https://unpkg.com/vue-router@4.2.5/dist/vue-router.global.js"></script>
+	-->
+	<script src="https://unpkg.com/vue@3.3.7/dist/vue.global.prod.js"></script>
+	<script src="https://unpkg.com/vue-router@4.2.5/dist/vue-router.global.prod.js"></script>
 </head>
 
 <body>
@@ -28,40 +31,35 @@
 			Michael Clavell
 		</h1>
 		<h2>
-			Gameplay Programmer
+			Gameplay Engineer
 		</h2>
 		<div class="socialMediaButtons">
-			<button type="button" class="button email"
-				onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
-			<button type="button" class="button linkedIn"
+			<button type="button" class="button email" alt="email button"
+				onclick="window.open('mailto:michaelclavell11@gmail.com')"></button>
+			<button type="button" class="button linkedIn" alt="linkedin button"
 				onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-			<button type="button" class="button handshake"
-				onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-			<button type="button" class="button gitHub" 
+			<button type="button" class="button gitHub" alt="github button"
 				onclick="window.open('https://github.com/MAClavell')"></button>
-			<button type="button" class="button itch" 
+			<button type="button" class="button itch" alt="itch.io button"
 				onclick="window.open('https://joms.itch.io/')"></button>
 		</div>
 	</div>
 
 	<div id="projectsContainer">
 		<div id="root">
-			<h2>Projects</h2>
-			<div :key="$route.fullPath" id="tabContainer">
-				<tab v-for="(t, index) in tabs" v-bind:name="t.Name" v-bind:index="index"></tab>
-			</div>
-			<div id="routerContainer">
-				<transition name="fade" mode="out-in" enter-active-class="animated fadeIn"
-					leave-active-class="animated fadeOut">
-					<router-view :key="$route.fullPath"></router-view>
-				</transition>
-			</div>
+			<h2 id="projectsHeader">Projects</h2>
+			<div id="routerContainer"></div>
 		</div>
 		<div id="resume">
 			<h2>Resume</h2>
-			<div class="selectButton"
-				onclick="window.open('media/Michael_Clavell_Resume.pdf')">Click here for full PDF</div>
-			<iframe src="media/Michael_Clavell_Resume.pdf" frameborder="0"></iframe>
+			<div class="selectButton" alt="download resume" onclick="window.open('media/Michael_Clavell_Resume.pdf')">
+				Click here for full PDF
+			</div>
+			<embed
+				src="media/Michael_Clavell_Resume.pdf#toolbar=1&navpanes=0"
+				type="application/pdf"
+				alt="resume"
+			/>
 		</div>
 	</div>
 
@@ -69,16 +67,17 @@
 		<div id="about">
 			<h2>About Me</h2>
 			<p>
-				My name is Michael Clavell and I am a fourth year student at the Rochester Institute of Technology, 
-				studying for a B.S. in Game Design and Development and a minor in Computer Science.
+				I love making games.
+				Professionally, my career started at Vicarious Visions in 2020.
+				Since then the company moved umbrellas from the Activision side to the Blizzard side and has become Blizzard Albany, where I work on the Diablo franchies.
 			</p>
 			<p>
-				My strengths lie in gameplay programming and engine programming.
-				I have used these skills to make over a dozen games in my academic career (some of which are featured here).
-				My go-to languages are C++ with a custom game engine and C# with Unity3D.
+				I am an avid gamer who loves playing most generes of games (not horror!), but RPGs always have a special place in my heart.
+				That has translated to tabletop games as I am an avid Dungeons and Dragons player and DM.
+				Getting to sit down and theorycraft a build in a new game or ideate a narrative moment for my tabletop game is one of my favorite things.
 			</p>
 			<p>
-				Outside of school, I am part of RIT's pep band where I play percussion at hockey games and various other events.
+
 			</p>
 		</div>
 	</div>
@@ -87,20 +86,19 @@
 		<div id="contact">
 			<h2>Contact Me</h2>
 			<div class="socialMediaButtons">
-				<button type="button" class="button email"
-					onclick="window.open('mailto:mac9406@g.rit.edu')"></button>
-				<button type="button" class="button linkedIn"
+				<button type="button" class="button email" alt="email button"
+					onclick="window.open('mailto:michaelclavell11@gmail.com')"></button>
+				<button type="button" class="button linkedIn" alt="linkedin button"
 					onclick="window.open('https://www.linkedin.com/in/michael-clavell')"></button>
-				<button type="button" class="button handshake"
-					onclick="window.open('https://app.joinhandshake.com/users/6921691')"></button>
-				<button type="button" class="button gitHub"
+				<button type="button" class="button gitHub" alt="github button"
 					onclick="window.open('https://github.com/MAClavell')"></button>
-				<button type="button" class="button itch" onclick="window.open('https://joms.itch.io/')"></button>
+				<button type="button" class="button itch" alt="itch.io button"
+					onclick="window.open('https://joms.itch.io/')"></button>
 			</div>
 		</div>
 	</div>
 
-	<div id="copyright">&#169; Michael Clavell, 2019</div>
+	<div id="copyright">&#169; Michael Clavell, 2023</div>
 
 	<script src="js/project-data.js"></script>
 	<script src="js/vue-components.js"></script>
