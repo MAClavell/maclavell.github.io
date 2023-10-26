@@ -25,7 +25,7 @@ const app = Vue.createApp({
     },
     template: `
     <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+        <transition name="fade" mode="out-in" enter-active-class="animated fadeIn">
             <component :is="Component" />
         </transition>
     </router-view>
