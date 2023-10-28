@@ -88,7 +88,7 @@ const projectsData = [
             <li>Shadows for directional lights.</li>
             <li>Config file (currently only supports framerate caps).</li>
         </ul>
-        <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">Check out my progress project on GitHub.</a>
+        <a href="https://github.com/MAClavell/Cpp-DirectX-Engine" target="_blank">Check out the code on GitHub.</a>
         </p>
         `,
         VideoLink: "https://www.youtube.com/embed/96H2_ydlltg",
